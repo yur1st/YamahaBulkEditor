@@ -1,0 +1,951 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="PcbDataFile">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="LastEditing">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="SetupMachine">
+                                <xs:complexType>
+                                    <xs:attribute name="No" type="xs:unsignedByte" use="required"/>
+                                    <xs:attribute name="Name" type="xs:string" use="required"/>
+                                    <xs:attribute name="ID" type="xs:unsignedShort" use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="Date" type="xs:string" use="required"/>
+                        <xs:attribute name="Time" type="xs:time" use="required"/>
+                        <xs:attribute name="VersionNo" type="xs:unsignedByte" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Machine">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Property">
+                                <xs:complexType>
+                                    <xs:attribute name="LastEditingDate" type="xs:string" use="required"/>
+                                    <xs:attribute name="LastEditingTime" type="xs:time" use="required"/>
+                                    <xs:attribute name="VersionNo" type="xs:unsignedByte" use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Production">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="ProductGroup">
+                                            <xs:complexType>
+                                                <xs:attribute name="No" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="Lane" type="xs:unsignedByte" use="required"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Board">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Board_000">
+                                            <xs:complexType>
+                                                <xs:attribute name="OriginX" type="xs:decimal" use="required"/>
+                                                <xs:attribute name="OriginY" type="xs:decimal" use="required"/>
+                                                <xs:attribute name="SizeX" type="xs:decimal" use="required"/>
+                                                <xs:attribute name="SizeY" type="xs:decimal" use="required"/>
+                                                <xs:attribute name="BlockCount" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="SizeZ" type="xs:decimal" use="required"/>
+                                                <xs:attribute name="TransOffsetU" type="xs:decimal" use="required"/>
+                                                <xs:attribute name="TransOffsetT1" type="xs:decimal" use="required"/>
+                                                <xs:attribute name="TransOffsetT2" type="xs:decimal" use="required"/>
+                                                <xs:attribute name="BoardStandardCT" type="xs:decimal" use="required"/>
+                                                <xs:attribute name="BoardStandardPlanTime" type="xs:unsignedByte"
+                                                              use="required"/>
+                                                <xs:attribute name="CarriedPosCheck" type="xs:unsignedByte"
+                                                              use="required"/>
+                                                <xs:attribute name="CarriedPosCheckValue" type="xs:decimal"
+                                                              use="required"/>
+                                                <xs:attribute name="CarriedPosCheckDetail" type="xs:unsignedByte"
+                                                              use="required"/>
+                                                <xs:attribute name="CarriedPosCheckMark" type="xs:unsignedByte"
+                                                              use="required"/>
+                                                <xs:attribute name="CarriedPosCheckMarkX" type="xs:decimal"
+                                                              use="required"/>
+                                                <xs:attribute name="CarriedPosCheckMarkY" type="xs:decimal"
+                                                              use="required"/>
+                                                <xs:attribute name="BoardEdgeOffsetDistanceLowerLeft" type="xs:decimal"
+                                                              use="required"/>
+                                                <xs:attribute name="BoardEdgeOffsetDistanceLowerRight" type="xs:decimal"
+                                                              use="required"/>
+                                                <xs:attribute name="BoardEdgeOffsetDistanceUpperLeft" type="xs:decimal"
+                                                              use="required"/>
+                                                <xs:attribute name="BoardEdgeOffsetDistanceUpperRight" type="xs:decimal"
+                                                              use="required"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="Board_101">
+                                            <xs:complexType>
+                                                <xs:attribute name="PcbFixWay" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="ConvPreFixTimer" type="xs:decimal" use="required"/>
+                                                <xs:attribute name="TransHeight" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="ConvTimer" type="xs:decimal" use="required"/>
+                                                <xs:attribute name="YSpeed" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="TransMode" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="ConvSpeed" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="PartHeight" type="xs:decimal" use="required"/>
+                                                <xs:attribute name="ConvTransWay" type="xs:unsignedByte"
+                                                              use="required"/>
+                                                <xs:attribute name="TransferOneByOne" type="xs:unsignedByte"
+                                                              use="required"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="Board_102">
+                                            <xs:complexType>
+                                                <xs:attribute name="MountExec" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="VacCheck" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="Alignment" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="CoPlanarity" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="PrePick" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="RetrySeq" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="SkipRetry" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="PositionFreeSetup" type="xs:unsignedByte"
+                                                              use="required"/>
+                                                <xs:attribute name="TrayPre" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="FixedComp" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="Correct3A" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="InterfereAvoidance" type="xs:unsignedByte"
+                                                              use="required"/>
+                                                <xs:attribute name="MountSequenceMethod" type="xs:unsignedByte"
+                                                              use="required"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="Board_103">
+                                            <xs:complexType>
+                                                <xs:attribute name="BadSortA" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="BadSortB" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="BadSortC" type="xs:unsignedByte" use="required"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="Board_104">
+                                            <xs:complexType>
+                                                <xs:attribute name="Comment" type="xs:string" use="required"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="Board_105">
+                                            <xs:complexType>
+                                                <xs:attribute name="PreDisp" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="DotDisp" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="DotCheck" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="Refresh" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="PosCorDisp" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="PosCorPreDisp" type="xs:unsignedByte"
+                                                              use="required"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="Board_106">
+                                            <xs:complexType>
+                                                <xs:attribute name="SpecialFunction" type="xs:unsignedByte"
+                                                              use="required"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="Board_107">
+                                            <xs:complexType>
+                                                <xs:attribute name="PushUpPinSetupManagement" type="xs:unsignedByte"
+                                                              use="required"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="Board_108">
+                                            <xs:complexType>
+                                                <xs:attribute name="HeadA1" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="HeadA2" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="HeadA3" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="HeadA4" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="HeadA5" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="HeadA6" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="HeadA7" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="HeadA8" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="HeadA9" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="HeadA10" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="HeadA11" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="HeadA12" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="HeadA13" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="HeadA14" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="HeadA15" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="HeadA16" type="xs:unsignedByte" use="required"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="Board_109">
+                                            <xs:complexType>
+                                                <xs:attribute name="HeadB1" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="HeadB2" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="HeadB3" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="HeadB4" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="HeadB5" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="HeadB6" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="HeadB7" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="HeadB8" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="HeadB9" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="HeadB10" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="HeadB11" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="HeadB12" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="HeadB13" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="HeadB14" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="HeadB15" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="HeadB16" type="xs:unsignedByte" use="required"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="Board_110">
+                                            <xs:complexType>
+                                                <xs:attribute name="TempControlA1" type="xs:unsignedByte"
+                                                              use="required"/>
+                                                <xs:attribute name="TempControlA2" type="xs:unsignedByte"
+                                                              use="required"/>
+                                                <xs:attribute name="TempControlA3" type="xs:unsignedByte"
+                                                              use="required"/>
+                                                <xs:attribute name="TempControlA4" type="xs:unsignedByte"
+                                                              use="required"/>
+                                                <xs:attribute name="TempControlA5" type="xs:unsignedByte"
+                                                              use="required"/>
+                                                <xs:attribute name="TempControlA6" type="xs:unsignedByte"
+                                                              use="required"/>
+                                                <xs:attribute name="TempControlA7" type="xs:unsignedByte"
+                                                              use="required"/>
+                                                <xs:attribute name="TempControlA8" type="xs:unsignedByte"
+                                                              use="required"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="Board_111">
+                                            <xs:complexType>
+                                                <xs:attribute name="TargetTempA1" type="xs:unsignedByte"
+                                                              use="required"/>
+                                                <xs:attribute name="TargetTempA2" type="xs:unsignedByte"
+                                                              use="required"/>
+                                                <xs:attribute name="TargetTempA3" type="xs:unsignedByte"
+                                                              use="required"/>
+                                                <xs:attribute name="TargetTempA4" type="xs:unsignedByte"
+                                                              use="required"/>
+                                                <xs:attribute name="TargetTempA5" type="xs:unsignedByte"
+                                                              use="required"/>
+                                                <xs:attribute name="TargetTempA6" type="xs:unsignedByte"
+                                                              use="required"/>
+                                                <xs:attribute name="TargetTempA7" type="xs:unsignedByte"
+                                                              use="required"/>
+                                                <xs:attribute name="TargetTempA8" type="xs:unsignedByte"
+                                                              use="required"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Fiducial">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="FidUse">
+                                            <xs:complexType>
+                                                <xs:attribute name="Pcb" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="Blk" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="Local" type="xs:unsignedByte" use="required"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="PcbFid">
+                                            <xs:complexType>
+                                                <xs:attribute name="X1" type="xs:decimal" use="required"/>
+                                                <xs:attribute name="Y1" type="xs:decimal" use="required"/>
+                                                <xs:attribute name="Mark1" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="X2" type="xs:decimal" use="required"/>
+                                                <xs:attribute name="Y2" type="xs:decimal" use="required"/>
+                                                <xs:attribute name="Mark2" type="xs:unsignedByte" use="required"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="BlkFid">
+                                            <xs:complexType>
+                                                <xs:attribute name="X1" type="xs:decimal" use="required"/>
+                                                <xs:attribute name="Y1" type="xs:decimal" use="required"/>
+                                                <xs:attribute name="Mark1" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="X2" type="xs:decimal" use="required"/>
+                                                <xs:attribute name="Y2" type="xs:decimal" use="required"/>
+                                                <xs:attribute name="Mark2" type="xs:unsignedByte" use="required"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="BadMark">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="BadUse">
+                                            <xs:complexType>
+                                                <xs:attribute name="Pcb" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="Blk" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="Local" type="xs:unsignedByte" use="required"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="PcbBad">
+                                            <xs:complexType>
+                                                <xs:attribute name="X" type="xs:decimal" use="required"/>
+                                                <xs:attribute name="Y" type="xs:decimal" use="required"/>
+                                                <xs:attribute name="Mark" type="xs:unsignedByte" use="required"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="BlkBad">
+                                            <xs:complexType>
+                                                <xs:attribute name="X" type="xs:decimal" use="required"/>
+                                                <xs:attribute name="Y" type="xs:decimal" use="required"/>
+                                                <xs:attribute name="Mark" type="xs:unsignedByte" use="required"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Offset">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element maxOccurs="unbounded" name="Repeat">
+                                            <xs:complexType>
+                                                <xs:attribute name="No" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="X" type="xs:decimal" use="required"/>
+                                                <xs:attribute name="Y" type="xs:decimal" use="required"/>
+                                                <xs:attribute name="R" type="xs:decimal" use="required"/>
+                                                <xs:attribute name="Exec" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="Comment" type="xs:string" use="required"/>
+                                                <xs:attribute name="OrgBlk" type="xs:unsignedByte" use="required"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Mounts">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element maxOccurs="unbounded" name="Mount">
+                                            <xs:complexType>
+                                                <xs:attribute name="No" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="X" type="xs:decimal" use="required"/>
+                                                <xs:attribute name="Y" type="xs:decimal" use="required"/>
+                                                <xs:attribute name="R" type="xs:decimal" use="required"/>
+                                                <xs:attribute name="Fid" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="Bad" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="Comp" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="Group" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="Opt" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="Opt2" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="Head" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="PickRod" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="MountRod" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="Nozzle" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="Exec" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="Comment" type="xs:string" use="required"/>
+                                                <xs:attribute name="OrgBlk" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="MaskDX" type="xs:decimal" use="required"/>
+                                                <xs:attribute name="MaskDY" type="xs:decimal" use="required"/>
+                                                <xs:attribute name="SeqOrder" type="xs:byte" use="required"/>
+                                                <xs:attribute name="GroupID" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="GrpOrder" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="CodeScan" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="MntStage" type="xs:unsignedByte" use="required"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Programs">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Program">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="Commands"/>
+                                                    <xs:element name="LocalPoints"/>
+                                                    <xs:element name="Watches"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="GlobalPoints"/>
+                            <xs:element name="PreDispenses"/>
+                            <xs:element name="DotDispenses"/>
+                            <xs:element name="PosCorDispenses"/>
+                            <xs:element name="Parts">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element maxOccurs="unbounded" name="Part">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="Part_001">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="PartsName" type="xs:string"
+                                                                          use="required"/>
+                                                            <xs:attribute name="Comment" type="xs:string"
+                                                                          use="required"/>
+                                                            <xs:attribute name="DatabaseNo" type="xs:unsignedShort"
+                                                                          use="required"/>
+                                                            <xs:attribute name="LibraryUse" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="LibraryFolder" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="LibraryPath" type="xs:string"
+                                                                          use="required"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="Part_002">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="ShapeType" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="Package" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="FdrType" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="ReelDiameter" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="BitFlags" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element minOccurs="0" name="Part_062">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="Algorithm" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="BaseVType" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="Option1" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="Option2" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="Option3" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="Option4" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="Part_003">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="Setno" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="Definition" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="XPos" type="xs:decimal" use="required"/>
+                                                            <xs:attribute name="YPos" type="xs:decimal" use="required"/>
+                                                            <xs:attribute name="FdrIdxStep" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="FdrIdxSpeed" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="FeederTimerOffset" type="xs:decimal"
+                                                                          use="required"/>
+                                                            <xs:attribute name="Optimize" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="PartsGroupNo" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="FixCmp" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="SwFdr" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="PitchEffect" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="Correct3A" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="UnitNo" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="PickPosCheck" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="PickToleranceX" type="xs:decimal"
+                                                                          use="required"/>
+                                                            <xs:attribute name="PickToleranceY" type="xs:decimal"
+                                                                          use="required"/>
+                                                            <xs:attribute name="PickToleranceR" type="xs:decimal"
+                                                                          use="required"/>
+                                                            <xs:attribute name="PickToleranceOffsetX" type="xs:decimal"
+                                                                          use="required"/>
+                                                            <xs:attribute name="PickToleranceOffsetY" type="xs:decimal"
+                                                                          use="required"/>
+                                                            <xs:attribute name="BoardDataTuning" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="ToleranceTuning" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element minOccurs="0" name="Part_016">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="BodyX" type="xs:decimal"
+                                                                          use="required"/>
+                                                            <xs:attribute name="BodyY" type="xs:decimal"
+                                                                          use="required"/>
+                                                            <xs:attribute name="BodyZ" type="xs:decimal"
+                                                                          use="required"/>
+                                                            <xs:attribute name="OffsetX" type="xs:decimal"
+                                                                          use="required"/>
+                                                            <xs:attribute name="OffsetY" type="xs:decimal"
+                                                                          use="required"/>
+                                                            <xs:attribute name="OffsetR" type="xs:decimal"
+                                                                          use="required"/>
+                                                            <xs:attribute name="MoldX" type="xs:decimal"
+                                                                          use="required"/>
+                                                            <xs:attribute name="MoldY" type="xs:decimal"
+                                                                          use="required"/>
+                                                            <xs:attribute name="MoldZ" type="xs:decimal"
+                                                                          use="required"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element minOccurs="0" name="Part_023">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="RlrOffset" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="LeadWidth" type="xs:decimal"
+                                                                          use="required"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element minOccurs="0" name="Part_012">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="BodyX" type="xs:decimal"
+                                                                          use="required"/>
+                                                            <xs:attribute name="BodyY" type="xs:decimal"
+                                                                          use="required"/>
+                                                            <xs:attribute name="BodyZ" type="xs:decimal"
+                                                                          use="required"/>
+                                                            <xs:attribute name="MoldX" type="xs:decimal"
+                                                                          use="required"/>
+                                                            <xs:attribute name="MoldY" type="xs:decimal"
+                                                                          use="required"/>
+                                                            <xs:attribute name="MoldZ" type="xs:decimal"
+                                                                          use="required"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element minOccurs="0" name="Part_025">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="RlrOffset" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="RlrWidth" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="LeadWidth" type="xs:decimal"
+                                                                          use="required"/>
+                                                            <xs:attribute name="LeadLength" type="xs:decimal"
+                                                                          use="required"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element minOccurs="0" name="Part_033">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="LeadNumN" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="LeadPitchN" type="xs:decimal"
+                                                                          use="required"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element minOccurs="0" name="Part_034">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="LeadNumS" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="LeadPitchS" type="xs:decimal"
+                                                                          use="required"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element minOccurs="0" name="Part_070">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="Alignment" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="AlignRefSubMlt" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="AlignRefSubSgl" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="AlignRefSubScan" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="AutoThreshold" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="Threshold" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="Tolerance" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="SearchArea" type="xs:decimal"
+                                                                          use="required"/>
+                                                            <xs:attribute name="DatumAngle" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="MultiMACS" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="OffsetRec" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="RecognitionOffsetZ" type="xs:decimal"
+                                                                          use="required"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element minOccurs="0" name="Part_013">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="BodyX" type="xs:decimal"
+                                                                          use="required"/>
+                                                            <xs:attribute name="BodyY" type="xs:decimal"
+                                                                          use="required"/>
+                                                            <xs:attribute name="BodyZ" type="xs:decimal"
+                                                                          use="required"/>
+                                                            <xs:attribute name="MoldX" type="xs:decimal"
+                                                                          use="required"/>
+                                                            <xs:attribute name="MoldY" type="xs:decimal"
+                                                                          use="required"/>
+                                                            <xs:attribute name="MoldZ" type="xs:decimal"
+                                                                          use="required"/>
+                                                            <xs:attribute name="Thicknesschk" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element minOccurs="0" name="Part_021">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="RlrOffset" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element minOccurs="0" name="Part_071">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="Alignment" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="AlignRefSubMlt" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="AlignRefSubSgl" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="AlignRefSubScan" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="AutoThreshold" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="Threshold" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="Tolerance" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="SearchArea" type="xs:decimal"
+                                                                          use="required"/>
+                                                            <xs:attribute name="DatumAngle" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="CompIntensity" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="MultiMACS" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="OffsetRec" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="RecognitionOffsetZ" type="xs:decimal"
+                                                                          use="required"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="Part_072">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="LightSetting" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="LightLevel" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="Part_074">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="CoplaLevel" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="CoplaThreshold" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="Part_076">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="LightMode" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="MainLightLevel" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="CoaxsLightLevel" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="SideLightLevel" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="Part_080">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="Nozzle" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="XYSpeed" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="ConvYSpeed" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="FdrAngle" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="VacChk" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="CorrectPos" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="Action" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="PickStart" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="Dump" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="Retry" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="Part_081">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="PckHeight" type="xs:decimal"
+                                                                          use="required"/>
+                                                            <xs:attribute name="PckTimer" type="xs:decimal"
+                                                                          use="required"/>
+                                                            <xs:attribute name="PckSpeed" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="PckVLevel" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="PckSingleDir" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="PckCtrlDown" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="PckCtrlUp" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="NozzleTouchHeight" type="xs:decimal"
+                                                                          use="required"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="Part_083">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="MntHeight" type="xs:decimal"
+                                                                          use="required"/>
+                                                            <xs:attribute name="MntTimer" type="xs:decimal"
+                                                                          use="required"/>
+                                                            <xs:attribute name="MntSpeed" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="MntPLevel" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="MntSingleDir" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="MntCtrlDown" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="MntCtrlUp" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="MntInsertLength" type="xs:decimal"
+                                                                          use="required"/>
+                                                            <xs:attribute name="MntInsertShortDistance"
+                                                                          type="xs:decimal" use="required"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="Part_300">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="Pck2ndSrvDown" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="Pck2ndSrvUp" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="Part_301">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="Mnt2ndSrvDown" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="Mnt2ndSrvUp" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="Part_302">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="PckForceExist" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="PckForceTarget" type="xs:decimal"
+                                                                          use="required"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="Part_303">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="MntForceExist" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="MntForceTarget" type="xs:decimal"
+                                                                          use="required"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="Part_200">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="DspCType" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="DNozzle" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="Dtimer" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="DXpos" type="xs:decimal"
+                                                                          use="required"/>
+                                                            <xs:attribute name="DYpos" type="xs:decimal"
+                                                                          use="required"/>
+                                                            <xs:attribute name="DspAngle" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="DXpt" type="xs:decimal" use="required"/>
+                                                            <xs:attribute name="DYpt" type="xs:decimal" use="required"/>
+                                                            <xs:attribute name="DXtime" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="DYtime" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="Part_500">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="Category" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="DipAct" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="StampAct" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="Marking" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="Part_501">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="Option1StationNo" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="Option1WaitVision"
+                                                                          type="xs:unsignedByte" use="required"/>
+                                                            <xs:attribute name="Option1DownSequenceAir"
+                                                                          type="xs:unsignedByte" use="required"/>
+                                                            <xs:attribute name="Option12ndSrvDown"
+                                                                          type="xs:unsignedByte" use="required"/>
+                                                            <xs:attribute name="Option1DownSpeed" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="Option1LowendHeight" type="xs:decimal"
+                                                                          use="required"/>
+                                                            <xs:attribute name="Option1LowendTimer" type="xs:decimal"
+                                                                          use="required"/>
+                                                            <xs:attribute name="Option1UpSequenceAir"
+                                                                          type="xs:unsignedByte" use="required"/>
+                                                            <xs:attribute name="Option12ndSrvUp" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="Option1UpSpeed" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="Part_502">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="Option1ForceExist"
+                                                                          type="xs:unsignedByte" use="required"/>
+                                                            <xs:attribute name="Option1ForceTarget" type="xs:decimal"
+                                                                          use="required"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="Part_520">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="SVUse" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="SVBringBack" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="SVBodyLimit" type="xs:decimal"
+                                                                          use="required"/>
+                                                            <xs:attribute name="SVReverseCheck" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                                <xs:attribute name="No" type="xs:unsignedByte" use="required"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Marks">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element maxOccurs="unbounded" name="Mark">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="Mark_001">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="MarkName" type="xs:string"
+                                                                          use="required"/>
+                                                            <xs:attribute name="Comment" type="xs:string"
+                                                                          use="required"/>
+                                                            <xs:attribute name="DatabaseNo" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="LibraryUse" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="LibraryFolder" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="LibraryPath" type="xs:string"
+                                                                          use="required"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="Mark_011">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="MarkType" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="Shape" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="Exec" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="OutSize" type="xs:decimal"
+                                                                          use="required"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="Mark_100">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="Surface" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="Threshold" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="Tolerance" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="SearchAreaX" type="xs:decimal"
+                                                                          use="required"/>
+                                                            <xs:attribute name="SearchAreaY" type="xs:decimal"
+                                                                          use="required"/>
+                                                            <xs:attribute name="Sequence" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="Mark_200">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="LightingOuter" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="LightingInner" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="LightingDrop" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="LightingIROuter" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="LightingIRInner" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="FilterInner" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                            <xs:attribute name="FilterOuter" type="xs:unsignedByte"
+                                                                          use="required"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                                <xs:attribute name="No" type="xs:unsignedByte" use="required"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="CodeScan">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="CodeScanUse">
+                                            <xs:complexType>
+                                                <xs:attribute name="Pcb" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="Blk" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="Local" type="xs:unsignedByte" use="required"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="PcbCodeScan">
+                                            <xs:complexType>
+                                                <xs:attribute name="X1" type="xs:decimal" use="required"/>
+                                                <xs:attribute name="Y1" type="xs:decimal" use="required"/>
+                                                <xs:attribute name="Mark1" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="X2" type="xs:decimal" use="required"/>
+                                                <xs:attribute name="Y2" type="xs:decimal" use="required"/>
+                                                <xs:attribute name="Mark2" type="xs:unsignedByte" use="required"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="BlkCodeScan">
+                                            <xs:complexType>
+                                                <xs:attribute name="X1" type="xs:decimal" use="required"/>
+                                                <xs:attribute name="Y1" type="xs:decimal" use="required"/>
+                                                <xs:attribute name="Mark1" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="X2" type="xs:decimal" use="required"/>
+                                                <xs:attribute name="Y2" type="xs:decimal" use="required"/>
+                                                <xs:attribute name="Mark2" type="xs:unsignedByte" use="required"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="No" type="xs:unsignedByte" use="required"/>
+                        <xs:attribute name="MachineType" type="xs:unsignedByte" use="required"/>
+                        <xs:attribute name="SubMachineType" type="xs:unsignedByte" use="required"/>
+                        <xs:attribute name="Version" type="xs:string" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

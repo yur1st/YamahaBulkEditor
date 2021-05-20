@@ -15,10 +15,10 @@
 <?import javafx.scene.text.Font?>
 
 <VBox prefHeight="400.0" prefWidth="640.0"
-      xmlns="http://javafx.com/javafx/16"
+      xmlns="http://javafx.com/javafx/10"
       xmlns:fx="http://javafx.com/fxml/1"
       fx:id="rootNode"
-      fx:controller="sample.Controller">
+      fx:controller="com.editor.Controller">
 
     <MenuBar VBox.vgrow="NEVER">
         <Menu mnemonicParsing="false" text="File">
@@ -60,7 +60,7 @@
         </Label>
         <SplitPane dividerPositions="0.55" orientation="VERTICAL" prefHeight="375.0" prefWidth="640.0">
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
-                <TabPane prefHeight="203.0" prefWidth="637.0" tabClosingPolicy="UNAVAILABLE">
+                <TabPane fx:id="tabPane" prefHeight="203.0" prefWidth="637.0" tabClosingPolicy="UNAVAILABLE">
                     <Tab text="Единичное переименование">
                         <AnchorPane prefHeight="173.0" prefWidth="637.0">
                             <Label layoutX="27.0" layoutY="22.0" text="Старое наименование"/>
