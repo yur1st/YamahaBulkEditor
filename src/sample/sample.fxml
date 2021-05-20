@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="400.0" prefWidth="640.0"
+      xmlns="http://javafx.com/javafx/16"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:id="rootNode"
+      fx:controller="sample.Controller">
+
+    <MenuBar VBox.vgrow="NEVER">
+        <Menu mnemonicParsing="false" text="File">
+            <MenuItem mnemonicParsing="false" text="New"/>
+            <MenuItem mnemonicParsing="false" text="Open…"/>
+            <Menu mnemonicParsing="false" text="Open Recent"/>
+            <SeparatorMenuItem mnemonicParsing="false"/>
+            <MenuItem mnemonicParsing="false" text="Close"/>
+            <MenuItem mnemonicParsing="false" text="Save"/>
+            <MenuItem mnemonicParsing="false" text="Save As…"/>
+            <MenuItem mnemonicParsing="false" text="Revert"/>
+            <SeparatorMenuItem mnemonicParsing="false"/>
+            <MenuItem mnemonicParsing="false" text="Preferences…"/>
+            <SeparatorMenuItem mnemonicParsing="false"/>
+            <MenuItem mnemonicParsing="false" text="Quit"/>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Edit">
+            <MenuItem mnemonicParsing="false" text="Undo"/>
+            <MenuItem mnemonicParsing="false" text="Redo"/>
+            <SeparatorMenuItem mnemonicParsing="false"/>
+            <MenuItem mnemonicParsing="false" text="Cut"/>
+            <MenuItem mnemonicParsing="false" text="Copy"/>
+            <MenuItem mnemonicParsing="false" text="Paste"/>
+            <MenuItem mnemonicParsing="false" text="Delete"/>
+            <SeparatorMenuItem mnemonicParsing="false"/>
+            <MenuItem mnemonicParsing="false" text="Select All"/>
+            <MenuItem mnemonicParsing="false" text="Unselect All"/>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+            <MenuItem mnemonicParsing="false" text="About MyHelloApp"/>
+        </Menu>
+    </MenuBar>
+    <AnchorPane prefHeight="375.0" prefWidth="439.0" VBox.vgrow="ALWAYS">
+        <Label alignment="CENTER" layoutX="155.0" layoutY="177.0" style="&#10;"
+               text="Drag components from Library here…" textAlignment="CENTER" textFill="#9f9f9f">
+            <font>
+                <Font size="18.0"/>
+            </font>
+        </Label>
+        <SplitPane dividerPositions="0.55" orientation="VERTICAL" prefHeight="375.0" prefWidth="640.0">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                <TabPane prefHeight="203.0" prefWidth="637.0" tabClosingPolicy="UNAVAILABLE">
+                    <Tab text="Единичное переименование">
+                        <AnchorPane prefHeight="173.0" prefWidth="637.0">
+                            <Label layoutX="27.0" layoutY="22.0" text="Старое наименование"/>
+                            <TextField fx:id="oldName" layoutX="188.0" layoutY="18.0" prefHeight="25.0"
+                                       prefWidth="420.0"/>
+                            <Label layoutX="27.0" layoutY="68.0" text="Новое наименование"/>
+                            <TextField fx:id="newName" layoutX="188.0" layoutY="64.0" prefHeight="25.0"
+                                       prefWidth="420.0"/>
+                        </AnchorPane>
+                    </Tab>
+                    <Tab text="Групповое переименование">
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0"
+                                    prefWidth="637.0">
+                            <AnchorPane layoutX="-2.0" minHeight="0.0" minWidth="0.0" prefHeight="176.0"
+                                        prefWidth="637.0">
+                                <Label layoutX="23.0" layoutY="18.0" text="Путь к файлу замен"/>
+                                <TextField fx:id="pathToReplacements" layoutX="158.0" layoutY="14.0" prefHeight="25.0"
+                                           prefWidth="250.0"/>
+                                <Button fx:id="chooseReplacementsFile" layoutX="442.0" layoutY="14.0"
+                                        mnemonicParsing="false" text="Обзор" onAction="#chooseReplacementsFile"/>
+                                <Label layoutX="23.0" layoutY="55.0" text="Путь к FDX файлу"/>
+                                <TextField fx:id="pathToFDX" layoutX="158.0" layoutY="51.0" prefHeight="25.0"
+                                           prefWidth="250.0"/>
+                                <Button layoutX="442.0" layoutY="51.0" mnemonicParsing="false"
+                                        text="Обзор" onAction="#chooseFDXFile"/>
+                                <Button layoutX="412.0" layoutY="126.0" mnemonicParsing="false"
+                                        text="Сменить названия в базе данных" onAction="#changeBdNames"/>
+                            </AnchorPane>
+                        </AnchorPane>
+                    </Tab>
+                </TabPane>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="107.0" prefWidth="637.0">
+                <Label layoutX="42.0" layoutY="45.0" text="Путь к YFact"/>
+                <TextField fx:id="pathToYFact" layoutX="155.0" layoutY="41.0" prefHeight="25.0" prefWidth="250.0"/>
+                <Button onAction="#choosePathToYFact" layoutX="436.0" layoutY="41.0" mnemonicParsing="false"
+                        text="Обзор"/>
+                <Button onAction="#changeProgramNames" layoutX="414.0" layoutY="101.0" mnemonicParsing="false"
+                        text="Сменить названия в программах"/>
+            </AnchorPane>
+        </SplitPane>
+    </AnchorPane>
+</VBox>
