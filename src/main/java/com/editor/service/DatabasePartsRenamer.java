@@ -24,7 +24,6 @@ public class DatabasePartsRenamer extends AbstractPartsRenamer<PartsDatabaseFile
 
     }
 
-
     @Override
     public void changeNames() throws IOException, JAXBException {
         substitute(filename);
@@ -55,6 +54,5 @@ public class DatabasePartsRenamer extends AbstractPartsRenamer<PartsDatabaseFile
         output.getParentFile().mkdir();
         mar.marshal(databaseFile, output);
     }
-
 
 }
