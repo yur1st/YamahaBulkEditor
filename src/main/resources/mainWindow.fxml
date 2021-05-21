@@ -3,7 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
-<VBox prefHeight="400.0" prefWidth="640.0"
+<VBox prefHeight="380.0" prefWidth="630.0"
       xmlns="http://javafx.com/javafx/10"
       xmlns:fx="http://javafx.com/fxml/1"
       fx:id="rootNode"
@@ -47,17 +47,17 @@
                 <Font size="18.0"/>
             </font>
         </Label>
-        <SplitPane dividerPositions="0.55" orientation="VERTICAL" prefHeight="375.0" prefWidth="640.0">
+        <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="375.0" prefWidth="640.0">
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                 <TabPane fx:id="tabPane" prefHeight="203.0" prefWidth="637.0" tabClosingPolicy="UNAVAILABLE">
                     <Tab text="Единичное переименование">
                         <AnchorPane prefHeight="173.0" prefWidth="637.0">
-                            <Label layoutX="27.0" layoutY="22.0" text="Старое наименование"/>
-                            <TextField fx:id="oldName" layoutX="188.0" layoutY="18.0" prefHeight="25.0"
-                                       prefWidth="420.0"/>
-                            <Label layoutX="27.0" layoutY="68.0" text="Новое наименование"/>
-                            <TextField fx:id="newName" layoutX="188.0" layoutY="64.0" prefHeight="25.0"
-                                       prefWidth="420.0"/>
+                            <Label layoutX="15.0" layoutY="22.0" text="Старое наименование"/>
+                            <TextField fx:id="oldName" layoutX="140.0" layoutY="18.0" prefHeight="25.0"
+                                       prefWidth="400.0"/>
+                            <Label layoutX="15.0" layoutY="68.0" text="Новое наименование"/>
+                            <TextField fx:id="newName" layoutX="140.0" layoutY="64.0" prefHeight="25.0"
+                                       prefWidth="400.0"/>
                         </AnchorPane>
                     </Tab>
                     <Tab text="Групповое переименование">
@@ -65,17 +65,17 @@
                                     prefWidth="637.0">
                             <AnchorPane layoutX="-2.0" minHeight="0.0" minWidth="0.0" prefHeight="176.0"
                                         prefWidth="637.0">
-                                <Label layoutX="23.0" layoutY="18.0" text="Путь к файлу замен"/>
-                                <TextField fx:id="pathToReplacements" layoutX="158.0" layoutY="14.0" prefHeight="25.0"
-                                           prefWidth="250.0"/>
-                                <Button fx:id="chooseReplacementsFile" layoutX="442.0" layoutY="14.0"
+                                <Label layoutX="15.0" layoutY="22.0" text="Путь к файлу замен"/>
+                                <TextField fx:id="pathToReplacements" layoutX="140.0" layoutY="18.0" prefHeight="25.0"
+                                           prefWidth="400.0"/>
+                                <Button fx:id="chooseReplacementsFile" layoutX="550.0" layoutY="18.0"
                                         mnemonicParsing="false" text="Обзор" onAction="#chooseReplacementsFile"/>
-                                <Label layoutX="23.0" layoutY="55.0" text="Путь к FDX файлу"/>
-                                <TextField fx:id="pathToFDX" layoutX="158.0" layoutY="51.0" prefHeight="25.0"
-                                           prefWidth="250.0"/>
-                                <Button layoutX="442.0" layoutY="51.0" mnemonicParsing="false"
+                                <Label layoutX="15.0" layoutY="68.0" text="Путь к FDX файлу"/>
+                                <TextField fx:id="pathToFDX" layoutX="140.0" layoutY="64.0" prefHeight="25.0"
+                                           prefWidth="400.0"/>
+                                <Button layoutX="550.0" layoutY="64.0" mnemonicParsing="false"
                                         text="Обзор" onAction="#chooseFDXFile"/>
-                                <Button layoutX="412.0" layoutY="126.0" mnemonicParsing="false"
+                                <Button layoutX="400.0" layoutY="110.0" prefWidth="202" mnemonicParsing="false"
                                         text="Сменить названия в базе данных" onAction="#changeBdNames"/>
                             </AnchorPane>
                         </AnchorPane>
@@ -83,11 +83,12 @@
                 </TabPane>
             </AnchorPane>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="107.0" prefWidth="637.0">
-                <Label layoutX="42.0" layoutY="45.0" text="Путь к YFact"/>
-                <TextField fx:id="pathToYFact" layoutX="155.0" layoutY="41.0" prefHeight="25.0" prefWidth="250.0"/>
-                <Button onAction="#choosePathToYFact" layoutX="436.0" layoutY="41.0" mnemonicParsing="false"
+                <Label layoutX="15.0" layoutY="45.0" text="Путь к YFact"/>
+                <TextField fx:id="pathToYFact" layoutX="140.0" layoutY="45.0" prefHeight="25.0" prefWidth="400.0"/>
+                <Button onAction="#choosePathToYFact" layoutX="550.0" layoutY="45.0" mnemonicParsing="false"
                         text="Обзор"/>
-                <Button onAction="#changeProgramNames" layoutX="414.0" layoutY="101.0" mnemonicParsing="false"
+                <Button onAction="#changeProgramNames" layoutX="400.0" layoutY="91.0" prefWidth="202"
+                        mnemonicParsing="false"
                         text="Сменить названия в программах"/>
             </AnchorPane>
         </SplitPane>
