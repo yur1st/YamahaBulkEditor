@@ -3,11 +3,10 @@ package com.editor.domain.database;
 
 import jakarta.xml.bind.annotation.*;
 
+import javax.xml.datatype.XMLGregorianCalendar;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
-
-import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**

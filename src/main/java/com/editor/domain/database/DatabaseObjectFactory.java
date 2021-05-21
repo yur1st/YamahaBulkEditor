@@ -7,7 +7,7 @@ import jakarta.xml.bind.annotation.XmlRegistry;
 /**
  * This object contains factory methods for each
  * Java content interface and Java element interface
- * generated in the com.editor.domain.database package.
+ * generated in the main.java.com.editor.domain.database package.
  * <p>An ObjectFactory allows you to programatically
  * construct new instances of the Java representation
  * for XML content. The Java representation of XML
@@ -22,7 +22,7 @@ public class DatabaseObjectFactory {
 
 
     /**
-     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.editor.domain.database
+     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: main.java.com.editor.domain.database
      */
     public DatabaseObjectFactory() {
         //empty constructor
