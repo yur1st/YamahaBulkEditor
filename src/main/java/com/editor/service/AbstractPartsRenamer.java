@@ -25,7 +25,9 @@ public class AbstractPartsRenamer<T> {
             T t = clazz.cast(unmarshaller.unmarshal(new FileReader(filename)));
             return t;
         } catch (Exception e) {
-            System.out.println("Ошибка чтения файла");
+            System.out.println("File read error");
+            System.out.println(e.getMessage());
+            System.out.println(e.toString());
         }
         return null;
     }

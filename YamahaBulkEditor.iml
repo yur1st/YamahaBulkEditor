@@ -16,6 +16,7 @@
     <orderEntry type="library" name="Maven: org.openjfx:javafx-controls:mac:17-ea+9" level="project" />
     <orderEntry type="library" name="Maven: org.openjfx:javafx-graphics:mac:17-ea+9" level="project" />
     <orderEntry type="library" name="Maven: org.openjfx:javafx-fxml:mac:17-ea+9" level="project" />
+    <orderEntry type="library" name="Java EE 6-Java EE 6" level="project" />
     <orderEntry type="library" name="Maven: org.openjfx:javafx-base:17-ea+9" level="project" />
     <orderEntry type="library" name="Maven: org.openjfx:javafx-base:win:17-ea+9" level="project" />
     <orderEntry type="library" name="Maven: org.openjfx:javafx-controls:17-ea+9" level="project" />
@@ -24,10 +25,6 @@
     <orderEntry type="library" name="Maven: org.openjfx:javafx-graphics:win:17-ea+9" level="project" />
     <orderEntry type="library" name="Maven: org.openjfx:javafx-fxml:17-ea+9" level="project" />
     <orderEntry type="library" name="Maven: org.openjfx:javafx-fxml:win:17-ea+9" level="project" />
-    <orderEntry type="library" name="Maven: jakarta.xml.bind:jakarta.xml.bind-api:3.0.1" level="project" />
-    <orderEntry type="library" name="Maven: com.sun.activation:jakarta.activation:2.0.1" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: com.sun.xml.bind:jaxb-impl:3.0.1" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: com.sun.xml.bind:jaxb-core:3.0.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter:5.8.0-M1" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter-api:5.8.0-M1" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.apiguardian:apiguardian-api:1.1.1" level="project" />
@@ -41,5 +38,9 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.jetbrains.kotlin:kotlin-stdlib-common:1.4.20" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.jetbrains:annotations:13.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.4.20" level="project" />
+    <orderEntry type="library" name="Maven: jakarta.xml.bind:jakarta.xml.bind-api:3.0.1" level="project" />
+    <orderEntry type="library" name="Maven: com.sun.activation:jakarta.activation:2.0.1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: com.sun.xml.bind:jaxb-impl:3.0.1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: com.sun.xml.bind:jaxb-core:3.0.1" level="project" />
   </component>
 </module>
