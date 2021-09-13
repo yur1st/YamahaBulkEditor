@@ -1,4 +1,4 @@
-package com.editor.service;
+package com.editor.utils;
 
 import java.util.Map;
 

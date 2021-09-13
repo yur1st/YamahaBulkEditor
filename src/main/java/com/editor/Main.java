@@ -12,7 +12,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("mainWindow.fxml"));
         primaryStage.setTitle("Утилита групповой модификации программ");
-        primaryStage.setScene(new Scene(root, 630, 380));
+        primaryStage.setScene(new Scene(root, 630, 290));
         primaryStage.show();
     }
 

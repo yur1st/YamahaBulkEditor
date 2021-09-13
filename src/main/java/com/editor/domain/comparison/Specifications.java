@@ -32,7 +32,7 @@ import java.util.List;
  *                                 &lt;complexContent>
  *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *                                     &lt;attribute name="Name" use="required" type="{http://www.w3.org/2001/XMLSchema}string" />
- *                                     &lt;attribute name="Pos" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedByte" />
+ *                                     &lt;attribute name="Pos" use="required" type="{http://www.w3.org/2001/XMLSchema}string" />
  *                                   &lt;/restriction>
  *                                 &lt;/complexContent>
  *                               &lt;/complexType>
@@ -96,6 +96,8 @@ import java.util.List;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
@@ -139,6 +141,7 @@ public class Specifications {
 
     /**
      * Gets the value of the line property.
+     *
      */
     public short getLine() {
         return line;
@@ -146,6 +149,7 @@ public class Specifications {
 
     /**
      * Sets the value of the line property.
+     *
      */
     public void setLine(short value) {
         this.line = value;
@@ -172,7 +176,7 @@ public class Specifications {
      *                       &lt;complexContent>
      *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
      *                           &lt;attribute name="Name" use="required" type="{http://www.w3.org/2001/XMLSchema}string" />
-     *                           &lt;attribute name="Pos" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedByte" />
+     *                           &lt;attribute name="Pos" use="required" type="{http://www.w3.org/2001/XMLSchema}string" />
      *                         &lt;/restriction>
      *                       &lt;/complexContent>
      *                     &lt;/complexType>
@@ -230,6 +234,8 @@ public class Specifications {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
+     *
+     *
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -248,8 +254,10 @@ public class Specifications {
         /**
          * Gets the value of the addedParts property.
          *
-         * @return possible object is
-         * {@link Specifications.Spec.AddedParts }
+         * @return
+         *     possible object is
+         *     {@link Specifications.Spec.AddedParts }
+         *
          */
         public Specifications.Spec.AddedParts getAddedParts() {
             return addedParts;
@@ -258,8 +266,10 @@ public class Specifications {
         /**
          * Sets the value of the addedParts property.
          *
-         * @param value allowed object is
-         *              {@link Specifications.Spec.AddedParts }
+         * @param value
+         *     allowed object is
+         *     {@link Specifications.Spec.AddedParts }
+         *
          */
         public void setAddedParts(Specifications.Spec.AddedParts value) {
             this.addedParts = value;
@@ -268,8 +278,10 @@ public class Specifications {
         /**
          * Gets the value of the programs property.
          *
-         * @return possible object is
-         * {@link Specifications.Spec.Programs }
+         * @return
+         *     possible object is
+         *     {@link Specifications.Spec.Programs }
+         *
          */
         public Specifications.Spec.Programs getPrograms() {
             return programs;
@@ -278,8 +290,10 @@ public class Specifications {
         /**
          * Sets the value of the programs property.
          *
-         * @param value allowed object is
-         *              {@link Specifications.Spec.Programs }
+         * @param value
+         *     allowed object is
+         *     {@link Specifications.Spec.Programs }
+         *
          */
         public void setPrograms(Specifications.Spec.Programs value) {
             this.programs = value;
@@ -288,8 +302,10 @@ public class Specifications {
         /**
          * Gets the value of the name property.
          *
-         * @return possible object is
-         * {@link String }
+         * @return
+         *     possible object is
+         *     {@link String }
+         *
          */
         public String getName() {
             return name;
@@ -298,8 +314,10 @@ public class Specifications {
         /**
          * Sets the value of the name property.
          *
-         * @param value allowed object is
-         *              {@link String }
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *
          */
         public void setName(String value) {
             this.name = value;
@@ -321,7 +339,7 @@ public class Specifications {
          *             &lt;complexContent>
          *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
          *                 &lt;attribute name="Name" use="required" type="{http://www.w3.org/2001/XMLSchema}string" />
-         *                 &lt;attribute name="Pos" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedByte" />
+         *                 &lt;attribute name="Pos" use="required" type="{http://www.w3.org/2001/XMLSchema}string" />
          *               &lt;/restriction>
          *             &lt;/complexContent>
          *           &lt;/complexType>
@@ -331,10 +349,12 @@ public class Specifications {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
+         *
+         *
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-                "part"
+            "part"
         })
         public static class AddedParts {
 
@@ -344,8 +364,10 @@ public class Specifications {
             /**
              * Gets the value of the part property.
              *
-             * @return possible object is
-             * {@link Specifications.Spec.AddedParts.Part }
+             * @return
+             *     possible object is
+             *     {@link Specifications.Spec.AddedParts.Part }
+             *
              */
             public Specifications.Spec.AddedParts.Part getPart() {
                 return part;
@@ -354,8 +376,10 @@ public class Specifications {
             /**
              * Sets the value of the part property.
              *
-             * @param value allowed object is
-             *              {@link Specifications.Spec.AddedParts.Part }
+             * @param value
+             *     allowed object is
+             *     {@link Specifications.Spec.AddedParts.Part }
+             *
              */
             public void setPart(Specifications.Spec.AddedParts.Part value) {
                 this.part = value;
@@ -372,11 +396,13 @@ public class Specifications {
              *   &lt;complexContent>
              *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
              *       &lt;attribute name="Name" use="required" type="{http://www.w3.org/2001/XMLSchema}string" />
-             *       &lt;attribute name="Pos" use="required" type="{http://www.w3.org/2001/XMLSchema}unsignedByte" />
+             *       &lt;attribute name="Pos" use="required" type="{http://www.w3.org/2001/XMLSchema}string" />
              *     &lt;/restriction>
              *   &lt;/complexContent>
              * &lt;/complexType>
              * </pre>
+             *
+             *
              */
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "")
@@ -385,14 +411,15 @@ public class Specifications {
                 @XmlAttribute(name = "Name", required = true)
                 protected String name;
                 @XmlAttribute(name = "Pos", required = true)
-                @XmlSchemaType(name = "unsignedByte")
-                protected short pos;
+                protected String pos;
 
                 /**
                  * Gets the value of the name property.
                  *
-                 * @return possible object is
-                 * {@link String }
+                 * @return
+                 *     possible object is
+                 *     {@link String }
+                 *
                  */
                 public String getName() {
                     return name;
@@ -401,8 +428,10 @@ public class Specifications {
                 /**
                  * Sets the value of the name property.
                  *
-                 * @param value allowed object is
-                 *              {@link String }
+                 * @param value
+                 *     allowed object is
+                 *     {@link String }
+                 *
                  */
                 public void setName(String value) {
                     this.name = value;
@@ -410,15 +439,25 @@ public class Specifications {
 
                 /**
                  * Gets the value of the pos property.
+                 *
+                 * @return
+                 *     possible object is
+                 *     {@link String }
+                 *
                  */
-                public short getPos() {
+                public String getPos() {
                     return pos;
                 }
 
                 /**
                  * Sets the value of the pos property.
+                 *
+                 * @param value
+                 *     allowed object is
+                 *     {@link String }
+                 *
                  */
-                public void setPos(short value) {
+                public void setPos(String value) {
                     this.pos = value;
                 }
 
@@ -474,10 +513,12 @@ public class Specifications {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
+         *
+         *
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-                "program"
+            "program"
         })
         public static class Programs {
 
@@ -503,6 +544,8 @@ public class Specifications {
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link Specifications.Spec.Programs.Program }
+             *
+             *
              */
             public List<Specifications.Spec.Programs.Program> getProgram() {
                 if (program == null) {
@@ -549,10 +592,12 @@ public class Specifications {
              *   &lt;/complexContent>
              * &lt;/complexType>
              * </pre>
+             *
+             *
              */
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "", propOrder = {
-                    "parts",
+                "parts",
                     "removedParts"
             })
             public static class Program {
@@ -567,8 +612,10 @@ public class Specifications {
                 /**
                  * Gets the value of the parts property.
                  *
-                 * @return possible object is
-                 * {@link Specifications.Spec.Programs.Program.Parts }
+                 * @return
+                 *     possible object is
+                 *     {@link Specifications.Spec.Programs.Program.Parts }
+                 *
                  */
                 public Specifications.Spec.Programs.Program.Parts getParts() {
                     return parts;
@@ -577,8 +624,10 @@ public class Specifications {
                 /**
                  * Sets the value of the parts property.
                  *
-                 * @param value allowed object is
-                 *              {@link Specifications.Spec.Programs.Program.Parts }
+                 * @param value
+                 *     allowed object is
+                 *     {@link Specifications.Spec.Programs.Program.Parts }
+                 *
                  */
                 public void setParts(Specifications.Spec.Programs.Program.Parts value) {
                     this.parts = value;
@@ -587,8 +636,10 @@ public class Specifications {
                 /**
                  * Gets the value of the removedParts property.
                  *
-                 * @return possible object is
-                 * {@link Object }
+                 * @return
+                 *     possible object is
+                 *     {@link Object }
+                 *
                  */
                 public Object getRemovedParts() {
                     return removedParts;
@@ -597,8 +648,10 @@ public class Specifications {
                 /**
                  * Sets the value of the removedParts property.
                  *
-                 * @param value allowed object is
-                 *              {@link Object }
+                 * @param value
+                 *     allowed object is
+                 *     {@link Object }
+                 *
                  */
                 public void setRemovedParts(Object value) {
                     this.removedParts = value;
@@ -607,8 +660,10 @@ public class Specifications {
                 /**
                  * Gets the value of the path property.
                  *
-                 * @return possible object is
-                 * {@link String }
+                 * @return
+                 *     possible object is
+                 *     {@link String }
+                 *
                  */
                 public String getPath() {
                     return path;
@@ -617,8 +672,10 @@ public class Specifications {
                 /**
                  * Sets the value of the path property.
                  *
-                 * @param value allowed object is
-                 *              {@link String }
+                 * @param value
+                 *     allowed object is
+                 *     {@link String }
+                 *
                  */
                 public void setPath(String value) {
                     this.path = value;
@@ -650,10 +707,12 @@ public class Specifications {
                  *   &lt;/complexContent>
                  * &lt;/complexType>
                  * </pre>
+                 *
+                 *
                  */
                 @XmlAccessorType(XmlAccessType.FIELD)
                 @XmlType(name = "", propOrder = {
-                        "part"
+                    "part"
                 })
                 public static class Parts {
 
@@ -679,6 +738,8 @@ public class Specifications {
                      * <p>
                      * Objects of the following type(s) are allowed in the list
                      * {@link Specifications.Spec.Programs.Program.Parts.Part }
+                     *
+                     *
                      */
                     public List<Specifications.Spec.Programs.Program.Parts.Part> getPart() {
                         if (part == null) {
@@ -703,6 +764,8 @@ public class Specifications {
                      *   &lt;/complexContent>
                      * &lt;/complexType>
                      * </pre>
+                     *
+                     *
                      */
                     @XmlAccessorType(XmlAccessType.FIELD)
                     @XmlType(name = "")
@@ -716,8 +779,10 @@ public class Specifications {
                         /**
                          * Gets the value of the name property.
                          *
-                         * @return possible object is
-                         * {@link String }
+                         * @return
+                         *     possible object is
+                         *     {@link String }
+                         *
                          */
                         public String getName() {
                             return name;
@@ -726,8 +791,10 @@ public class Specifications {
                         /**
                          * Sets the value of the name property.
                          *
-                         * @param value allowed object is
-                         *              {@link String }
+                         * @param value
+                         *     allowed object is
+                         *     {@link String }
+                         *
                          */
                         public void setName(String value) {
                             this.name = value;
@@ -736,8 +803,10 @@ public class Specifications {
                         /**
                          * Gets the value of the pos property.
                          *
-                         * @return possible object is
-                         * {@link String }
+                         * @return
+                         *     possible object is
+                         *     {@link String }
+                         *
                          */
                         public String getPos() {
                             return pos;
@@ -746,8 +815,10 @@ public class Specifications {
                         /**
                          * Sets the value of the pos property.
                          *
-                         * @param value allowed object is
-                         *              {@link String }
+                         * @param value
+                         *     allowed object is
+                         *     {@link String }
+                         *
                          */
                         public void setPos(String value) {
                             this.pos = value;

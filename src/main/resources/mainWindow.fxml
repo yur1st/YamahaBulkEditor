@@ -3,7 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
-<VBox prefHeight="380.0" prefWidth="630.0"
+<VBox prefHeight="280.0" prefWidth="630.0"
       xmlns="http://javafx.com/javafx/10"
       xmlns:fx="http://javafx.com/fxml/1"
       fx:id="rootNode"
@@ -17,14 +17,21 @@
             <MenuItem mnemonicParsing="false" text="О программе..."/>
         </Menu>
     </MenuBar>
-    <AnchorPane prefHeight="375.0" prefWidth="439.0" VBox.vgrow="ALWAYS">
+    <AnchorPane prefHeight="275.0" prefWidth="439.0" VBox.vgrow="ALWAYS">
         <Label alignment="CENTER" layoutX="155.0" layoutY="177.0" style="&#10;"
                text="Drag components from Library here…" textAlignment="CENTER" textFill="#9f9f9f">
             <font>
                 <Font size="18.0"/>
             </font>
         </Label>
-        <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="375.0" prefWidth="640.0">
+        <SplitPane dividerPositions="0.27" orientation="VERTICAL" prefHeight="275.0" prefWidth="640.0">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="107.0" prefWidth="637.0">
+                <Label layoutX="15.0" layoutY="25.0" text="Путь к YFact"/>
+                <TextField fx:id="pathToYFact" layoutX="140.0" layoutY="25.0" prefHeight="25.0" prefWidth="400.0"/>
+                <Button onAction="#choosePathToYFact" layoutX="550.0" layoutY="25.0" mnemonicParsing="false"
+                        text="Обзор"/>
+
+            </AnchorPane>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                 <TabPane fx:id="tabPane" prefHeight="203.0" prefWidth="637.0" tabClosingPolicy="UNAVAILABLE">
                     <Tab text="Единичное переименование">
@@ -81,13 +88,7 @@
                     </Tab>
                 </TabPane>
             </AnchorPane>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="107.0" prefWidth="637.0">
-                <Label layoutX="15.0" layoutY="45.0" text="Путь к YFact"/>
-                <TextField fx:id="pathToYFact" layoutX="140.0" layoutY="45.0" prefHeight="25.0" prefWidth="400.0"/>
-                <Button onAction="#choosePathToYFact" layoutX="550.0" layoutY="45.0" mnemonicParsing="false"
-                        text="Обзор"/>
 
-            </AnchorPane>
         </SplitPane>
     </AnchorPane>
 </VBox>

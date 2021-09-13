@@ -56,7 +56,13 @@ public class Controller {
 
     private void chooseFile(TextField field, ExtensionFilter filter, String loc) {
         FileChooser fileChooser = new FileChooser();
-        fileChooser.setInitialDirectory(new File("C:\\"));
+        String initPath;
+        if (pathToYFact.getText().isEmpty()) {
+            initPath = "C:\\";
+        } else {
+            initPath = pathToYFact.getText();
+        }
+        fileChooser.setInitialDirectory(new File(initPath));
         fileChooser.getExtensionFilters().addAll(filter);
         File selectFile = fileChooser.showOpenDialog(rootNode.getScene().getWindow());
         if (selectFile != null) field.setText(selectFile.getPath());
@@ -64,6 +70,8 @@ public class Controller {
 
     public void changeProgramNames() throws IOException, JAXBException {
         renameAll("parts", pathToYFact.getText());
+        showError("Обработка завершена");
+
         /*Map<String, String> subs = new HashMap<>();
         if (tabPane.getSelectionModel().getSelectedIndex() == 1) {
             subs = CSVReader.readCSV(pathToReplacements.getText());
@@ -76,6 +84,8 @@ public class Controller {
 
     public void changeBdNames() throws IOException, JAXBException {
         renameAll("base", pathToFDX.getText());
+        showError("Обработка завершена");
+
         /*Map<String, String> subs = new HashMap<>();
         boolean fieldsValid = false;
         if (tabPane.getSelectionModel().getSelectedIndex() == 1) {
@@ -93,16 +103,21 @@ public class Controller {
 
     public void changeBySpec() throws IOException, JAXBException {
         renameAll("spec", pathToResults.getText());
+        showError("Обработка завершена");
+
     }
 
     public <T extends AbstractPartsRenamer<T>> void renameAll(String what, String path) throws IOException, JAXBException {
         Map<String, String> subs = new HashMap<>();
-        boolean fieldsValid;
+        boolean fieldsValid = false;
         if (tabPane.getSelectionModel().getSelectedIndex() == 1) {
             if (fieldsValid = validateFields(pathToReplacements, pathToFDX, pathToYFact))
                 subs = CSVReader.readCSV(pathToReplacements.getText());
-        } else {
+        } else if (tabPane.getSelectionModel().getSelectedIndex() == 0) {
             if (fieldsValid = validateFields(oldName, newName, pathToYFact))
+                subs.put(oldName.getText(), newName.getText());
+        } else if (tabPane.getSelectionModel().getSelectedIndex() == 2) {
+            if (fieldsValid = validateFields(pathToResults, pathToYFact))
                 subs.put(oldName.getText(), newName.getText());
         }
         if (subs != null && fieldsValid) {
@@ -138,7 +153,13 @@ public class Controller {
 
     private void chooseDir(TextField field, String location) {
         DirectoryChooser chooser = new DirectoryChooser();
-        chooser.setInitialDirectory(new File("C:\\"));
+        String initPath;
+        if (pathToYFact.getText().isEmpty()) {
+            initPath = "C:\\";
+        } else {
+            initPath = pathToYFact.getText();
+        }
+        chooser.setInitialDirectory(new File(initPath));
         chooser.setTitle("JavaFX Projects");
         File selectedDirectory = chooser.showDialog(rootNode.getScene().getWindow());
         if (selectedDirectory != null) field.setText(selectedDirectory.getPath());

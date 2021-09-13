@@ -23,12 +23,14 @@ public class ObjectFactory {
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: mypackage
+     *
      */
     public ObjectFactory() {
     }
 
     /**
      * Create an instance of {@link Specifications }
+     *
      */
     public Specifications createSpecifications() {
         return new Specifications();
@@ -36,6 +38,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link Specifications.Spec }
+     *
      */
     public Specifications.Spec createSpecificationsSpec() {
         return new Specifications.Spec();
@@ -43,6 +46,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link Specifications.Spec.Programs }
+     *
      */
     public Specifications.Spec.Programs createSpecificationsSpecPrograms() {
         return new Specifications.Spec.Programs();
@@ -50,6 +54,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link Specifications.Spec.Programs.Program }
+     *
      */
     public Specifications.Spec.Programs.Program createSpecificationsSpecProgramsProgram() {
         return new Specifications.Spec.Programs.Program();
@@ -57,6 +62,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link Specifications.Spec.Programs.Program.Parts }
+     *
      */
     public Specifications.Spec.Programs.Program.Parts createSpecificationsSpecProgramsProgramParts() {
         return new Specifications.Spec.Programs.Program.Parts();
@@ -64,6 +70,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link Specifications.Spec.AddedParts }
+     *
      */
     public Specifications.Spec.AddedParts createSpecificationsSpecAddedParts() {
         return new Specifications.Spec.AddedParts();
@@ -71,6 +78,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link Specifications.Spec.Programs.Program.Parts.Part }
+     *
      */
     public Specifications.Spec.Programs.Program.Parts.Part createSpecificationsSpecProgramsProgramPartsPart() {
         return new Specifications.Spec.Programs.Program.Parts.Part();
@@ -78,6 +86,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link Specifications.Spec.AddedParts.Part }
+     *
      */
     public Specifications.Spec.AddedParts.Part createSpecificationsSpecAddedPartsPart() {
         return new Specifications.Spec.AddedParts.Part();

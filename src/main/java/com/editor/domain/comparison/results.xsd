@@ -14,7 +14,7 @@
                                         <xs:element name="Part">
                                             <xs:complexType>
                                                 <xs:attribute name="Name" type="xs:string" use="required"/>
-                                                <xs:attribute name="Pos" type="xs:unsignedByte" use="required"/>
+                                                <xs:attribute name="Pos" type="xs:string" use="required"/>
                                             </xs:complexType>
                                         </xs:element>
                                     </xs:sequence>
