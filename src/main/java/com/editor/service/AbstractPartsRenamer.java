@@ -4,8 +4,11 @@ import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBException;
 import jakarta.xml.bind.Unmarshaller;
 
-import java.io.FileReader;
+import java.io.*;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class AbstractPartsRenamer<T> {
     protected Map<String, String> substitutions;
@@ -30,5 +33,33 @@ public class AbstractPartsRenamer<T> {
             System.out.println(e.toString());
         }
         return null;
+    }
+
+    public void textSubstitute(String filename) throws IOException {
+        List<String> strings = new LinkedList<>();
+        try (BufferedReader br = new BufferedReader(new FileReader(new File(filename)))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                strings.add(line);
+
+            }
+        }
+        List<String> output = strings.stream()
+                .map(s -> makeSubs(s))
+                .collect(Collectors.toList());
+        try (FileWriter writer = new FileWriter(filename)) {
+            for (String str : output) {
+                writer.write(str + System.lineSeparator());
+            }
+        }
+
+    }
+
+    public String makeSubs(String input) {
+        String output = input;
+        for (Map.Entry<String, String> entry : substitutions.entrySet()) {
+            output = output.replace(entry.getKey(), entry.getValue());
+        }
+        return output;
     }
 }

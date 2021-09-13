@@ -4,6 +4,7 @@ import com.editor.dao.CSVReader;
 import com.editor.service.AbstractPartsRenamer;
 import com.editor.service.DatabasePartsRenamer;
 import com.editor.service.ProgramPartsRenamer;
+import com.editor.service.ProgramPartsRenamerBySpec;
 import jakarta.xml.bind.JAXBException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -37,19 +38,25 @@ public class Controller {
     public VBox rootNode;
     @FXML
     public TabPane tabPane;
+    @FXML
+    public TextField pathToResults;
 
 
     public void chooseReplacementsFile() {
-        chooseFile(pathToReplacements, new ExtensionFilter("FDX Library", "*.csv", "*.txt"));
+        chooseFile(pathToReplacements, new ExtensionFilter("TXT file", "*.csv", "*.txt"), "replacement");
+    }
+
+    public void chooseResultsFile() {
+        chooseFile(pathToResults, new ExtensionFilter("XML file", "*.xml"), "results");
     }
 
     public void chooseFDXFile() {
-        chooseFile(pathToFDX, new ExtensionFilter("FDX Library", "*.fdx"));
+        chooseFile(pathToFDX, new ExtensionFilter("FDX Library", "*.fdx"), "FDX");
     }
 
-    private void chooseFile(TextField field, ExtensionFilter filter) {
+    private void chooseFile(TextField field, ExtensionFilter filter, String loc) {
         FileChooser fileChooser = new FileChooser();
-        fileChooser.setInitialDirectory(new File("C:\\Temp\\test"));
+        fileChooser.setInitialDirectory(new File("C:\\"));
         fileChooser.getExtensionFilters().addAll(filter);
         File selectFile = fileChooser.showOpenDialog(rootNode.getScene().getWindow());
         if (selectFile != null) field.setText(selectFile.getPath());
@@ -84,6 +91,10 @@ public class Controller {
         }*/
     }
 
+    public void changeBySpec() throws IOException, JAXBException {
+        renameAll("spec", pathToResults.getText());
+    }
+
     public <T extends AbstractPartsRenamer<T>> void renameAll(String what, String path) throws IOException, JAXBException {
         Map<String, String> subs = new HashMap<>();
         boolean fieldsValid;
@@ -100,6 +111,9 @@ public class Controller {
                 renamer.changeNames();
             } else if ("parts".equals(what)) {
                 ProgramPartsRenamer renamer = new ProgramPartsRenamer(subs, pathToYFact.getText());
+                renamer.changeNames();
+            } else if ("spec".equals(what)) {
+                ProgramPartsRenamerBySpec renamer = new ProgramPartsRenamerBySpec(pathToResults.getText(), pathToYFact.getText());
                 renamer.changeNames();
             }
         } else {
@@ -119,12 +133,12 @@ public class Controller {
     }
 
     public void choosePathToYFact() {
-        chooseDir(pathToYFact);
+        chooseDir(pathToYFact, "YFact");
     }
 
-    private void chooseDir(TextField field) {
+    private void chooseDir(TextField field, String location) {
         DirectoryChooser chooser = new DirectoryChooser();
-        chooser.setInitialDirectory(new File("C:\\Temp\\test"));
+        chooser.setInitialDirectory(new File("C:\\"));
         chooser.setTitle("JavaFX Projects");
         File selectedDirectory = chooser.showDialog(rootNode.getScene().getWindow());
         if (selectedDirectory != null) field.setText(selectedDirectory.getPath());
@@ -133,4 +147,6 @@ public class Controller {
     public void quit(ActionEvent actionEvent) {
 
     }
+
+
 }

@@ -26,7 +26,7 @@ public class DatabasePartsRenamer extends AbstractPartsRenamer<PartsDatabaseFile
 
     @Override
     public void changeNames() throws IOException, JAXBException {
-        substitute(filename);
+        textSubstitute(filename);
     }
 
     public void substitute(String filename) throws JAXBException, IOException {

@@ -35,6 +35,9 @@
                             <Label layoutX="15.0" layoutY="68.0" text="Новое наименование"/>
                             <TextField fx:id="newName" layoutX="140.0" layoutY="64.0" prefHeight="25.0"
                                        prefWidth="400.0"/>
+                            <Button onAction="#changeProgramNames" layoutX="400.0" layoutY="110.0" prefWidth="202"
+                                    mnemonicParsing="false"
+                                    text="Сменить названия в программах"/>
                         </AnchorPane>
                     </Tab>
                     <Tab text="Групповое переименование">
@@ -52,8 +55,27 @@
                                            prefWidth="400.0"/>
                                 <Button layoutX="550.0" layoutY="64.0" mnemonicParsing="false"
                                         text="Обзор" onAction="#chooseFDXFile"/>
-                                <Button layoutX="400.0" layoutY="110.0" prefWidth="202" mnemonicParsing="false"
+                                <Button onAction="#changeProgramNames" layoutX="400.0" layoutY="110.0" prefWidth="202"
+                                        mnemonicParsing="false"
+                                        text="Сменить названия в программах"/>
+                                <Button layoutX="180.0" layoutY="110.0" prefWidth="202" mnemonicParsing="false"
                                         text="Сменить названия в базе данных" onAction="#changeBdNames"/>
+                            </AnchorPane>
+                        </AnchorPane>
+                    </Tab>
+                    <Tab text="Переименование по СП">
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0"
+                                    prefWidth="637.0">
+                            <AnchorPane layoutX="-2.0" minHeight="0.0" minWidth="0.0" prefHeight="176.0"
+                                        prefWidth="637.0">
+                                <Label layoutX="15.0" layoutY="22.0" text="Путь к результатам"/>
+                                <TextField fx:id="pathToResults" layoutX="140.0" layoutY="18.0" prefHeight="25.0"
+                                           prefWidth="400.0"/>
+                                <Button fx:id="chooseResultsFile" layoutX="550.0" layoutY="18.0"
+                                        mnemonicParsing="false" text="Обзор" onAction="#chooseResultsFile"/>
+                                <Button onAction="#changeBySpec" layoutX="400.0" layoutY="110.0" prefWidth="202"
+                                        mnemonicParsing="false"
+                                        text="Сменить названия в программах"/>
                             </AnchorPane>
                         </AnchorPane>
                     </Tab>
@@ -64,9 +86,7 @@
                 <TextField fx:id="pathToYFact" layoutX="140.0" layoutY="45.0" prefHeight="25.0" prefWidth="400.0"/>
                 <Button onAction="#choosePathToYFact" layoutX="550.0" layoutY="45.0" mnemonicParsing="false"
                         text="Обзор"/>
-                <Button onAction="#changeProgramNames" layoutX="400.0" layoutY="91.0" prefWidth="202"
-                        mnemonicParsing="false"
-                        text="Сменить названия в программах"/>
+
             </AnchorPane>
         </SplitPane>
     </AnchorPane>
