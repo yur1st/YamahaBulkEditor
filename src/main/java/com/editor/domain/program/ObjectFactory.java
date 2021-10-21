@@ -86,6 +86,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link PcbDataFile.Machine.Parts.Part.ExLights }
+     *
      */
     public PcbDataFile.Machine.Parts.Part.ExLights createPcbDataFileMachinePartsPartExLights() {
         return new PcbDataFile.Machine.Parts.Part.ExLights();
@@ -93,6 +94,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link PcbDataFile.Machine.Programs }
+     *
      */
     public PcbDataFile.Machine.Programs createPcbDataFileMachinePrograms() {
         return new PcbDataFile.Machine.Programs();
@@ -100,6 +102,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link PcbDataFile.Machine.Mounts }
+     *
      */
     public PcbDataFile.Machine.Mounts createPcbDataFileMachineMounts() {
         return new PcbDataFile.Machine.Mounts();
@@ -234,14 +237,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part062 }
-     *
-     */
-    public PcbDataFile.Machine.Parts.Part.Part062 createPcbDataFileMachinePartsPartPart062() {
-        return new PcbDataFile.Machine.Parts.Part.Part062();
-    }
-
-    /**
      * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part003 }
      *
      */
@@ -250,82 +245,27 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part004 }
-     */
-    public PcbDataFile.Machine.Parts.Part.Part004 createPcbDataFileMachinePartsPartPart004() {
-        return new PcbDataFile.Machine.Parts.Part.Part004();
-    }
-
-    /**
      * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part012 }
+     *
      */
     public PcbDataFile.Machine.Parts.Part.Part012 createPcbDataFileMachinePartsPartPart012() {
         return new PcbDataFile.Machine.Parts.Part.Part012();
     }
 
     /**
-     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part013 }
-     */
-    public PcbDataFile.Machine.Parts.Part.Part013 createPcbDataFileMachinePartsPartPart013() {
-        return new PcbDataFile.Machine.Parts.Part.Part013();
-    }
-
-    /**
      * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part028 }
+     *
      */
     public PcbDataFile.Machine.Parts.Part.Part028 createPcbDataFileMachinePartsPartPart028() {
         return new PcbDataFile.Machine.Parts.Part.Part028();
     }
 
     /**
-     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part018 }
-     */
-    public PcbDataFile.Machine.Parts.Part.Part018 createPcbDataFileMachinePartsPartPart018() {
-        return new PcbDataFile.Machine.Parts.Part.Part018();
-    }
-
-    /**
-     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part025 }
-     */
-    public PcbDataFile.Machine.Parts.Part.Part025 createPcbDataFileMachinePartsPartPart025() {
-        return new PcbDataFile.Machine.Parts.Part.Part025();
-    }
-
-    /**
-     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part033 }
-     */
-    public PcbDataFile.Machine.Parts.Part.Part033 createPcbDataFileMachinePartsPartPart033() {
-        return new PcbDataFile.Machine.Parts.Part.Part033();
-    }
-
-    /**
-     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part034 }
-     */
-    public PcbDataFile.Machine.Parts.Part.Part034 createPcbDataFileMachinePartsPartPart034() {
-        return new PcbDataFile.Machine.Parts.Part.Part034();
-    }
-
-    /**
      * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part070 }
+     *
      */
     public PcbDataFile.Machine.Parts.Part.Part070 createPcbDataFileMachinePartsPartPart070() {
         return new PcbDataFile.Machine.Parts.Part.Part070();
-    }
-
-    /**
-     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part021 }
-     * 
-     */
-    public PcbDataFile.Machine.Parts.Part.Part021 createPcbDataFileMachinePartsPartPart021() {
-        return new PcbDataFile.Machine.Parts.Part.Part021();
-    }
-
-    /**
-     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part071 }
-     * 
-     */
-    public PcbDataFile.Machine.Parts.Part.Part071 createPcbDataFileMachinePartsPartPart071() {
-        return new PcbDataFile.Machine.Parts.Part.Part071();
     }
 
     /**
@@ -346,15 +286,20 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part076 }
-     * 
      */
     public PcbDataFile.Machine.Parts.Part.Part076 createPcbDataFileMachinePartsPartPart076() {
         return new PcbDataFile.Machine.Parts.Part.Part076();
     }
 
     /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part310 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part310 createPcbDataFileMachinePartsPartPart310() {
+        return new PcbDataFile.Machine.Parts.Part.Part310();
+    }
+
+    /**
      * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part080 }
-     * 
      */
     public PcbDataFile.Machine.Parts.Part.Part080 createPcbDataFileMachinePartsPartPart080() {
         return new PcbDataFile.Machine.Parts.Part.Part080();
@@ -442,10 +387,30 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part520 }
-     * 
      */
     public PcbDataFile.Machine.Parts.Part.Part520 createPcbDataFileMachinePartsPartPart520() {
         return new PcbDataFile.Machine.Parts.Part.Part520();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part103 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part103 createPcbDataFileMachinePartsPartPart103() {
+        return new PcbDataFile.Machine.Parts.Part.Part103();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part107 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part107 createPcbDataFileMachinePartsPartPart107() {
+        return new PcbDataFile.Machine.Parts.Part.Part107();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part016 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part016 createPcbDataFileMachinePartsPartPart016() {
+        return new PcbDataFile.Machine.Parts.Part.Part016();
     }
 
     /**
@@ -453,6 +418,433 @@ public class ObjectFactory {
      */
     public PcbDataFile.Machine.Parts.Part.Part023 createPcbDataFileMachinePartsPartPart023() {
         return new PcbDataFile.Machine.Parts.Part.Part023();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part062 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part062 createPcbDataFileMachinePartsPartPart062() {
+        return new PcbDataFile.Machine.Parts.Part.Part062();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part013 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part013 createPcbDataFileMachinePartsPartPart013() {
+        return new PcbDataFile.Machine.Parts.Part.Part013();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part021 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part021 createPcbDataFileMachinePartsPartPart021() {
+        return new PcbDataFile.Machine.Parts.Part.Part021();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part071 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part071 createPcbDataFileMachinePartsPartPart071() {
+        return new PcbDataFile.Machine.Parts.Part.Part071();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part025 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part025 createPcbDataFileMachinePartsPartPart025() {
+        return new PcbDataFile.Machine.Parts.Part.Part025();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part033 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part033 createPcbDataFileMachinePartsPartPart033() {
+        return new PcbDataFile.Machine.Parts.Part.Part033();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part034 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part034 createPcbDataFileMachinePartsPartPart034() {
+        return new PcbDataFile.Machine.Parts.Part.Part034();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part029 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part029 createPcbDataFileMachinePartsPartPart029() {
+        return new PcbDataFile.Machine.Parts.Part.Part029();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part031 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part031 createPcbDataFileMachinePartsPartPart031() {
+        return new PcbDataFile.Machine.Parts.Part.Part031();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part026 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part026 createPcbDataFileMachinePartsPartPart026() {
+        return new PcbDataFile.Machine.Parts.Part.Part026();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part064 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part064 createPcbDataFileMachinePartsPartPart064() {
+        return new PcbDataFile.Machine.Parts.Part.Part064();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part073 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part073 createPcbDataFileMachinePartsPartPart073() {
+        return new PcbDataFile.Machine.Parts.Part.Part073();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part027 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part027 createPcbDataFileMachinePartsPartPart027() {
+        return new PcbDataFile.Machine.Parts.Part.Part027();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part082 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part082 createPcbDataFileMachinePartsPartPart082() {
+        return new PcbDataFile.Machine.Parts.Part.Part082();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part101 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part101 createPcbDataFileMachinePartsPartPart101() {
+        return new PcbDataFile.Machine.Parts.Part.Part101();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part106 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part106 createPcbDataFileMachinePartsPartPart106() {
+        return new PcbDataFile.Machine.Parts.Part.Part106();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part108 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part108 createPcbDataFileMachinePartsPartPart108() {
+        return new PcbDataFile.Machine.Parts.Part.Part108();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part014 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part014 createPcbDataFileMachinePartsPartPart014() {
+        return new PcbDataFile.Machine.Parts.Part.Part014();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part022 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part022 createPcbDataFileMachinePartsPartPart022() {
+        return new PcbDataFile.Machine.Parts.Part.Part022();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part036 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part036 createPcbDataFileMachinePartsPartPart036() {
+        return new PcbDataFile.Machine.Parts.Part.Part036();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part037 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part037 createPcbDataFileMachinePartsPartPart037() {
+        return new PcbDataFile.Machine.Parts.Part.Part037();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part040 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part040 createPcbDataFileMachinePartsPartPart040() {
+        return new PcbDataFile.Machine.Parts.Part.Part040();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part041 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part041 createPcbDataFileMachinePartsPartPart041() {
+        return new PcbDataFile.Machine.Parts.Part.Part041();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part042 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part042 createPcbDataFileMachinePartsPartPart042() {
+        return new PcbDataFile.Machine.Parts.Part.Part042();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part043 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part043 createPcbDataFileMachinePartsPartPart043() {
+        return new PcbDataFile.Machine.Parts.Part.Part043();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part078 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part078 createPcbDataFileMachinePartsPartPart078() {
+        return new PcbDataFile.Machine.Parts.Part.Part078();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part017 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part017 createPcbDataFileMachinePartsPartPart017() {
+        return new PcbDataFile.Machine.Parts.Part.Part017();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part038 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part038 createPcbDataFileMachinePartsPartPart038() {
+        return new PcbDataFile.Machine.Parts.Part.Part038();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part039 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part039 createPcbDataFileMachinePartsPartPart039() {
+        return new PcbDataFile.Machine.Parts.Part.Part039();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part015 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part015 createPcbDataFileMachinePartsPartPart015() {
+        return new PcbDataFile.Machine.Parts.Part.Part015();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part032 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part032 createPcbDataFileMachinePartsPartPart032() {
+        return new PcbDataFile.Machine.Parts.Part.Part032();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part055 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part055 createPcbDataFileMachinePartsPartPart055() {
+        return new PcbDataFile.Machine.Parts.Part.Part055();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part057 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part057 createPcbDataFileMachinePartsPartPart057() {
+        return new PcbDataFile.Machine.Parts.Part.Part057();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part077 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part077 createPcbDataFileMachinePartsPartPart077() {
+        return new PcbDataFile.Machine.Parts.Part.Part077();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.BallSize }
+     */
+    public PcbDataFile.Machine.Parts.Part.BallSize createPcbDataFileMachinePartsPartBallSize() {
+        return new PcbDataFile.Machine.Parts.Part.BallSize();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Ball }
+     */
+    public PcbDataFile.Machine.Parts.Part.Ball createPcbDataFileMachinePartsPartBall() {
+        return new PcbDataFile.Machine.Parts.Part.Ball();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part010 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part010 createPcbDataFileMachinePartsPartPart010() {
+        return new PcbDataFile.Machine.Parts.Part.Part010();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part056 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part056 createPcbDataFileMachinePartsPartPart056() {
+        return new PcbDataFile.Machine.Parts.Part.Part056();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part011 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part011 createPcbDataFileMachinePartsPartPart011() {
+        return new PcbDataFile.Machine.Parts.Part.Part011();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part024 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part024 createPcbDataFileMachinePartsPartPart024() {
+        return new PcbDataFile.Machine.Parts.Part.Part024();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part044 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part044 createPcbDataFileMachinePartsPartPart044() {
+        return new PcbDataFile.Machine.Parts.Part.Part044();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part045 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part045 createPcbDataFileMachinePartsPartPart045() {
+        return new PcbDataFile.Machine.Parts.Part.Part045();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part046 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part046 createPcbDataFileMachinePartsPartPart046() {
+        return new PcbDataFile.Machine.Parts.Part.Part046();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part047 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part047 createPcbDataFileMachinePartsPartPart047() {
+        return new PcbDataFile.Machine.Parts.Part.Part047();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part048 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part048 createPcbDataFileMachinePartsPartPart048() {
+        return new PcbDataFile.Machine.Parts.Part.Part048();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part049 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part049 createPcbDataFileMachinePartsPartPart049() {
+        return new PcbDataFile.Machine.Parts.Part.Part049();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part050 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part050 createPcbDataFileMachinePartsPartPart050() {
+        return new PcbDataFile.Machine.Parts.Part.Part050();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part051 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part051 createPcbDataFileMachinePartsPartPart051() {
+        return new PcbDataFile.Machine.Parts.Part.Part051();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part052 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part052 createPcbDataFileMachinePartsPartPart052() {
+        return new PcbDataFile.Machine.Parts.Part.Part052();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part053 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part053 createPcbDataFileMachinePartsPartPart053() {
+        return new PcbDataFile.Machine.Parts.Part.Part053();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part054 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part054 createPcbDataFileMachinePartsPartPart054() {
+        return new PcbDataFile.Machine.Parts.Part.Part054();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part100 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part100 createPcbDataFileMachinePartsPartPart100() {
+        return new PcbDataFile.Machine.Parts.Part.Part100();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part104 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part104 createPcbDataFileMachinePartsPartPart104() {
+        return new PcbDataFile.Machine.Parts.Part.Part104();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part105 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part105 createPcbDataFileMachinePartsPartPart105() {
+        return new PcbDataFile.Machine.Parts.Part.Part105();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part063 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part063 createPcbDataFileMachinePartsPartPart063() {
+        return new PcbDataFile.Machine.Parts.Part.Part063();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part030 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part030 createPcbDataFileMachinePartsPartPart030() {
+        return new PcbDataFile.Machine.Parts.Part.Part030();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part004 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part004 createPcbDataFileMachinePartsPartPart004() {
+        return new PcbDataFile.Machine.Parts.Part.Part004();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part018 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part018 createPcbDataFileMachinePartsPartPart018() {
+        return new PcbDataFile.Machine.Parts.Part.Part018();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part109 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part109 createPcbDataFileMachinePartsPartPart109() {
+        return new PcbDataFile.Machine.Parts.Part.Part109();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.Part079 }
+     */
+    public PcbDataFile.Machine.Parts.Part.Part079 createPcbDataFileMachinePartsPartPart079() {
+        return new PcbDataFile.Machine.Parts.Part.Part079();
+    }
+
+    /**
+     * Create an instance of {@link PcbDataFile.Machine.Parts.Part.SmartRecognition }
+     */
+    public PcbDataFile.Machine.Parts.Part.SmartRecognition createPcbDataFileMachinePartsPartSmartRecognition() {
+        return new PcbDataFile.Machine.Parts.Part.SmartRecognition();
     }
 
     /**
@@ -471,6 +863,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link PcbDataFile.Machine.Mounts.Mount }
+     *
      */
     public PcbDataFile.Machine.Mounts.Mount createPcbDataFileMachineMountsMount() {
         return new PcbDataFile.Machine.Mounts.Mount();
@@ -486,7 +879,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link PcbDataFile.Machine.BadMark.BadUse }
-     * 
+     *
      */
     public PcbDataFile.Machine.BadMark.BadUse createPcbDataFileMachineBadMarkBadUse() {
         return new PcbDataFile.Machine.BadMark.BadUse();
@@ -530,14 +923,6 @@ public class ObjectFactory {
      */
     public PcbDataFile.Machine.Fiducial.BlkFid createPcbDataFileMachineFiducialBlkFid() {
         return new PcbDataFile.Machine.Fiducial.BlkFid();
-    }
-
-    /**
-     * Create an instance of {@link PcbDataFile.Machine.Fiducial.LclFid }
-     * 
-     */
-    public PcbDataFile.Machine.Fiducial.LclFid createPcbDataFileMachineFiducialLclFid() {
-        return new PcbDataFile.Machine.Fiducial.LclFid();
     }
 
     /**

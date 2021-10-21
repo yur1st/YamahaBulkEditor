@@ -29,7 +29,7 @@ public class DatabasePartsRenamer extends AbstractPartsRenamer<PartsDatabaseFile
         textSubstitute(filename);
     }
 
-    public void substitute(String filename) throws JAXBException, IOException {
+    public void substitute(String filename) throws JAXBException {
         PartsDatabaseFile databaseFile = unmarshall(filename, PartsDatabaseFile.class);
         if (databaseFile != null) {
             for (PartsDatabaseFile.Part part : databaseFile.getPart()) {

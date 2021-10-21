@@ -6,7 +6,6 @@ import com.editor.service.DatabasePartsRenamer;
 import com.editor.service.ProgramPartsRenamer;
 import com.editor.service.ProgramPartsRenamerBySpec;
 import jakarta.xml.bind.JAXBException;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TabPane;
 import javafx.scene.control.TextField;
@@ -23,6 +22,8 @@ import static com.editor.dao.MessageHelper.showError;
 import static javafx.stage.FileChooser.ExtensionFilter;
 
 public class Controller {
+
+    public static final String COMPLETE = "Обработка завершена";
 
     @FXML
     public TextField pathToReplacements;
@@ -70,7 +71,7 @@ public class Controller {
 
     public void changeProgramNames() throws IOException, JAXBException {
         renameAll("parts", pathToYFact.getText());
-        showError("Обработка завершена");
+        showError(COMPLETE);
 
         /*Map<String, String> subs = new HashMap<>();
         if (tabPane.getSelectionModel().getSelectedIndex() == 1) {
@@ -84,7 +85,7 @@ public class Controller {
 
     public void changeBdNames() throws IOException, JAXBException {
         renameAll("base", pathToFDX.getText());
-        showError("Обработка завершена");
+        showError(COMPLETE);
 
         /*Map<String, String> subs = new HashMap<>();
         boolean fieldsValid = false;
@@ -103,22 +104,29 @@ public class Controller {
 
     public void changeBySpec() throws IOException, JAXBException {
         renameAll("spec", pathToResults.getText());
-        showError("Обработка завершена");
+        showError(COMPLETE);
 
     }
 
     public <T extends AbstractPartsRenamer<T>> void renameAll(String what, String path) throws IOException, JAXBException {
         Map<String, String> subs = new HashMap<>();
         boolean fieldsValid = false;
-        if (tabPane.getSelectionModel().getSelectedIndex() == 1) {
-            if (fieldsValid = validateFields(pathToReplacements, pathToFDX, pathToYFact))
+        if (tabPane.getSelectionModel().getSelectedIndex() == 1 && validateFields(pathToReplacements, pathToFDX, pathToYFact)) {
+            {
                 subs = CSVReader.readCSV(pathToReplacements.getText());
-        } else if (tabPane.getSelectionModel().getSelectedIndex() == 0) {
-            if (fieldsValid = validateFields(oldName, newName, pathToYFact))
+                fieldsValid = true;
+            }
+        } else if (tabPane.getSelectionModel().getSelectedIndex() == 0 && validateFields(oldName, newName, pathToYFact)) {
+            {
                 subs.put(oldName.getText(), newName.getText());
-        } else if (tabPane.getSelectionModel().getSelectedIndex() == 2) {
-            if (fieldsValid = validateFields(pathToResults, pathToYFact))
+                fieldsValid = true;
+            }
+
+        } else if (tabPane.getSelectionModel().getSelectedIndex() == 2 && validateFields(pathToResults, pathToYFact)) {
+            {
                 subs.put(oldName.getText(), newName.getText());
+                fieldsValid = true;
+            }
         }
         if (subs != null && fieldsValid) {
             if ("base".equals(what)) {
@@ -163,10 +171,6 @@ public class Controller {
         chooser.setTitle("JavaFX Projects");
         File selectedDirectory = chooser.showDialog(rootNode.getScene().getWindow());
         if (selectedDirectory != null) field.setText(selectedDirectory.getPath());
-    }
-
-    public void quit(ActionEvent actionEvent) {
-
     }
 
 

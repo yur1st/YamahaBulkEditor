@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import java.io.IOException;
 import java.util.Map;
 
-public class CSVReaderTest {
+class CSVReaderTest {
 
     @Test
     void readCSV() throws IOException {

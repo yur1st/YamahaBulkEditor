@@ -55,7 +55,7 @@ public class ProgramPartsRenamer extends AbstractPartsRenamer<PcbDataFile>
         PcbDataFile program = unmarshall(filename, PcbDataFile.class);
         if (program != null) {
             for (PcbDataFile.Machine.Parts.Part part : program.getMachine().getParts().getPart()) {
-                PcbDataFile.Machine.Parts.Part.Part001 part001 = (PcbDataFile.Machine.Parts.Part.Part001) part.getPartProps().get(0);
+                PcbDataFile.Machine.Parts.Part.Part001 part001 = part.getPart001();
                 String newName = prepareNewName(part001.getPartsName());
                 part001.setPartsName(newName);
             }

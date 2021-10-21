@@ -25,8 +25,7 @@ public class AbstractPartsRenamer<T> {
         JAXBContext context = JAXBContext.newInstance(clazz);
         Unmarshaller unmarshaller = context.createUnmarshaller();
         try {
-            T t = clazz.cast(unmarshaller.unmarshal(new FileReader(filename)));
-            return t;
+            return clazz.cast(unmarshaller.unmarshal(new FileReader(filename)));
         } catch (Exception e) {
             System.out.println("File read error");
             System.out.println(e.getMessage());
@@ -45,7 +44,7 @@ public class AbstractPartsRenamer<T> {
             }
         }
         List<String> output = strings.stream()
-                .map(s -> makeSubs(s))
+                .map(this::makeSubs)
                 .collect(Collectors.toList());
         try (FileWriter writer = new FileWriter(filename)) {
             for (String str : output) {

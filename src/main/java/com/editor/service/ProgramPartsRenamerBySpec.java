@@ -46,8 +46,7 @@ public class ProgramPartsRenamerBySpec {
         for (PcbDataFile.Machine.Mounts.Mount mount : program.getMachine().getMounts().getMount()) {
             String partNumber = mount.getComp();
             String refDes = mount.getComment();
-            PcbDataFile.Machine.Parts.Part.Part001 part001 = (PcbDataFile.Machine.Parts.Part.Part001)
-                    program.getMachine().getParts().getPart().get(Integer.parseInt(partNumber.trim()) - 1).getPartProps().get(0);
+            PcbDataFile.Machine.Parts.Part.Part001 part001 = program.getMachine().getParts().getPart().get(Integer.parseInt(partNumber.trim()) - 1).getPart001();
             String componentName = components.get(refDes);
             if (componentName != null) {
                 part001.setPartsName(components.get(refDes));

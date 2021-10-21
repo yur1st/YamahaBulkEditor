@@ -1,0 +1,975 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="PartsDatabaseFile">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="LastEditing">
+                    <xs:complexType>
+                        <xs:sequence></xs:sequence>
+                        <xs:attribute name="Date" type="Wstring"/>
+                        <xs:attribute name="Time" type="Wstring"/>
+                        <xs:attribute name="VersionNo" type="Wstring"/>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element maxOccurs="unbounded" name="Part">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Part_001">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="PartsName" type="Wstring"/>
+                                    <xs:attribute name="Comment" type="Wstring"/>
+                                    <xs:attribute name="DatabaseNo" type="Wstring"/>
+                                    <xs:attribute name="LibraryUse" type="Wstring"/>
+                                    <xs:attribute name="LibraryFolder" type="Wstring"/>
+                                    <xs:attribute name="LibraryPath" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_002">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="ShapeType" type="Wstring"/>
+                                    <xs:attribute name="Package" type="Wstring"/>
+                                    <xs:attribute name="FdrType" type="Wstring"/>
+                                    <xs:attribute name="ReelDiameter" type="Wstring"/>
+                                    <xs:attribute name="BitFlags" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_003">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="Setno" type="Wstring"/>
+                                    <xs:attribute name="Definition" type="Wstring"/>
+                                    <xs:attribute name="XPos" type="Wstring"/>
+                                    <xs:attribute name="YPos" type="Wstring"/>
+                                    <xs:attribute name="FdrIdxStep" type="Wstring"/>
+                                    <xs:attribute name="FdrIdxSpeed" type="Wstring"/>
+                                    <xs:attribute name="FeederTimerOffset" type="Wstring"/>
+                                    <xs:attribute name="Optimize" type="Wstring"/>
+                                    <xs:attribute name="PartsGroupNo" type="Wstring"/>
+                                    <xs:attribute name="FixCmp" type="Wstring"/>
+                                    <xs:attribute name="SwFdr" type="Wstring"/>
+                                    <xs:attribute name="PitchEffect" type="Wstring"/>
+                                    <xs:attribute name="Correct3A" type="Wstring"/>
+                                    <xs:attribute name="UnitNo" type="Wstring"/>
+                                    <xs:attribute name="PickPosCheck" type="Wstring"/>
+                                    <xs:attribute name="PickToleranceX" type="Wstring"/>
+                                    <xs:attribute name="PickToleranceY" type="Wstring"/>
+                                    <xs:attribute name="BoardDataTuning" type="Wstring"/>
+                                    <xs:attribute name="ToleranceTuning" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_012">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="BodyX" type="Wstring"/>
+                                    <xs:attribute name="BodyY" type="Wstring"/>
+                                    <xs:attribute name="BodyZ" type="Wstring"/>
+                                    <xs:attribute name="MoldX" type="Wstring"/>
+                                    <xs:attribute name="MoldY" type="Wstring"/>
+                                    <xs:attribute name="MoldZ" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_028">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="RlrOffsetE" type="Wstring"/>
+                                    <xs:attribute name="RlrWidth" type="Wstring"/>
+                                    <xs:attribute name="LeadNumE" type="Wstring"/>
+                                    <xs:attribute name="LeadPitchE" type="Wstring"/>
+                                    <xs:attribute name="LeadWidthE" type="Wstring"/>
+                                    <xs:attribute name="LeadLengthE" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_070">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="Alignment" type="Wstring"/>
+                                    <xs:attribute name="AlignRefSubMlt" type="Wstring"/>
+                                    <xs:attribute name="AlignRefSubSgl" type="Wstring"/>
+                                    <xs:attribute name="AlignRefSubScan" type="Wstring"/>
+                                    <xs:attribute name="AutoThreshold" type="Wstring"/>
+                                    <xs:attribute name="Threshold" type="Wstring"/>
+                                    <xs:attribute name="Tolerance" type="Wstring"/>
+                                    <xs:attribute name="SearchArea" type="Wstring"/>
+                                    <xs:attribute name="DatumAngle" type="Wstring"/>
+                                    <xs:attribute name="MultiMACS" type="Wstring"/>
+                                    <xs:attribute name="OffsetRec" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_072">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="LightSetting" type="Wstring"/>
+                                    <xs:attribute name="LightLevel" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_074">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="CoplaLevel" type="Wstring"/>
+                                    <xs:attribute name="CoplaThreshold" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_076">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="LightMode" type="Wstring"/>
+                                    <xs:attribute name="MainLightLevel" type="Wstring"/>
+                                    <xs:attribute name="CoaxsLightLevel" type="Wstring"/>
+                                    <xs:attribute name="SideLightLevel" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_310">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="DDDExecPass" type="Wstring"/>
+                                    <xs:attribute name="DDDThreNmlCam" type="Wstring"/>
+                                    <xs:attribute name="DDDThreSlantCam" type="Wstring"/>
+                                    <xs:attribute name="DDDLightCoaxNmlCam" type="Wstring"/>
+                                    <xs:attribute name="DDDLightCoaxSlantCam" type="Wstring"/>
+                                    <xs:attribute name="DDDLightMainSlantCam" type="Wstring"/>
+                                    <xs:attribute name="DDDLightSideSlantCam" type="Wstring"/>
+                                    <xs:attribute name="DDDBrightAreaNmlCam" type="Wstring"/>
+                                    <xs:attribute name="DDDBrightAreaSlantCam" type="Wstring"/>
+                                    <xs:attribute name="DDDPermitTol" type="Wstring"/>
+                                    <xs:attribute name="DDDHeightCheck" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_080">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="Nozzle" type="Wstring"/>
+                                    <xs:attribute name="XYSpeed" type="Wstring"/>
+                                    <xs:attribute name="ConvYSpeed" type="Wstring"/>
+                                    <xs:attribute name="FdrAngle" type="Wstring"/>
+                                    <xs:attribute name="VacChk" type="Wstring"/>
+                                    <xs:attribute name="CorrectPos" type="Wstring"/>
+                                    <xs:attribute name="Action" type="Wstring"/>
+                                    <xs:attribute name="PickStart" type="Wstring"/>
+                                    <xs:attribute name="Dump" type="Wstring"/>
+                                    <xs:attribute name="Retry" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_081">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="PckHeight" type="Wstring"/>
+                                    <xs:attribute name="PckTimer" type="Wstring"/>
+                                    <xs:attribute name="PckSpeed" type="Wstring"/>
+                                    <xs:attribute name="PckVLevel" type="Wstring"/>
+                                    <xs:attribute name="PckSingleDir" type="Wstring"/>
+                                    <xs:attribute name="PckCtrlDown" type="Wstring"/>
+                                    <xs:attribute name="PckCtrlUp" type="Wstring"/>
+                                    <xs:attribute name="NozzleTouchHeight" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_083">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="MntHeight" type="Wstring"/>
+                                    <xs:attribute name="MntTimer" type="Wstring"/>
+                                    <xs:attribute name="MntSpeed" type="Wstring"/>
+                                    <xs:attribute name="MntPLevel" type="Wstring"/>
+                                    <xs:attribute name="MntSingleDir" type="Wstring"/>
+                                    <xs:attribute name="MntCtrlDown" type="Wstring"/>
+                                    <xs:attribute name="MntCtrlUp" type="Wstring"/>
+                                    <xs:attribute name="MntInsertLength" type="Wstring"/>
+                                    <xs:attribute name="MntInsertShortDistance" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_300">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="Pck2ndSrvDown" type="Wstring"/>
+                                    <xs:attribute name="Pck2ndSrvUp" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_301">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="Mnt2ndSrvDown" type="Wstring"/>
+                                    <xs:attribute name="Mnt2ndSrvUp" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_302">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="PckForceExist" type="Wstring"/>
+                                    <xs:attribute name="PckForceTarget" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_303">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="MntForceExist" type="Wstring"/>
+                                    <xs:attribute name="MntForceTarget" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_200">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="DspCType" type="Wstring"/>
+                                    <xs:attribute name="DNozzle" type="Wstring"/>
+                                    <xs:attribute name="Dtimer" type="Wstring"/>
+                                    <xs:attribute name="DXpos" type="Wstring"/>
+                                    <xs:attribute name="DYpos" type="Wstring"/>
+                                    <xs:attribute name="DspAngle" type="Wstring"/>
+                                    <xs:attribute name="DXpt" type="Wstring"/>
+                                    <xs:attribute name="DYpt" type="Wstring"/>
+                                    <xs:attribute name="DXtime" type="Wstring"/>
+                                    <xs:attribute name="DYtime" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_500">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="Category" type="Wstring"/>
+                                    <xs:attribute name="DipAct" type="Wstring"/>
+                                    <xs:attribute name="StampAct" type="Wstring"/>
+                                    <xs:attribute name="Marking" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_501">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="Option1StationNo" type="Wstring"/>
+                                    <xs:attribute name="Option1WaitVision" type="Wstring"/>
+                                    <xs:attribute name="Option1DownSequenceAir" type="Wstring"/>
+                                    <xs:attribute name="Option12ndSrvDown" type="Wstring"/>
+                                    <xs:attribute name="Option1DownSpeed" type="Wstring"/>
+                                    <xs:attribute name="Option1LowendHeight" type="Wstring"/>
+                                    <xs:attribute name="Option1LowendTimer" type="Wstring"/>
+                                    <xs:attribute name="Option1UpSequenceAir" type="Wstring"/>
+                                    <xs:attribute name="Option12ndSrvUp" type="Wstring"/>
+                                    <xs:attribute name="Option1UpSpeed" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_502">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="Option1ForceExist" type="Wstring"/>
+                                    <xs:attribute name="Option1ForceTarget" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_520">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="SVUse" type="Wstring"/>
+                                    <xs:attribute name="SVBringBack" type="Wstring"/>
+                                    <xs:attribute name="SVBodyLimit" type="Wstring"/>
+                                    <xs:attribute name="SVReverseCheck" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_103">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="TrayYiSize" type="Wstring"/>
+                                    <xs:attribute name="CountStp" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_107">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="TrayYiCur" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_016">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="BodyX" type="Wstring"/>
+                                    <xs:attribute name="BodyY" type="Wstring"/>
+                                    <xs:attribute name="BodyZ" type="Wstring"/>
+                                    <xs:attribute name="OffsetX" type="Wstring"/>
+                                    <xs:attribute name="OffsetY" type="Wstring"/>
+                                    <xs:attribute name="OffsetR" type="Wstring"/>
+                                    <xs:attribute name="MoldX" type="Wstring"/>
+                                    <xs:attribute name="MoldY" type="Wstring"/>
+                                    <xs:attribute name="MoldZ" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_023">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="RlrOffset" type="Wstring"/>
+                                    <xs:attribute name="LeadWidth" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_062">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="Algorithm" type="Wstring"/>
+                                    <xs:attribute name="BaseVType" type="Wstring"/>
+                                    <xs:attribute name="Option1" type="Wstring"/>
+                                    <xs:attribute name="Option2" type="Wstring"/>
+                                    <xs:attribute name="Option3" type="Wstring"/>
+                                    <xs:attribute name="Option4" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_013">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="BodyX" type="Wstring"/>
+                                    <xs:attribute name="BodyY" type="Wstring"/>
+                                    <xs:attribute name="BodyZ" type="Wstring"/>
+                                    <xs:attribute name="MoldX" type="Wstring"/>
+                                    <xs:attribute name="MoldY" type="Wstring"/>
+                                    <xs:attribute name="MoldZ" type="Wstring"/>
+                                    <xs:attribute name="Thicknesschk" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_021">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="RlrOffset" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_071">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="Alignment" type="Wstring"/>
+                                    <xs:attribute name="AlignRefSubMlt" type="Wstring"/>
+                                    <xs:attribute name="AlignRefSubSgl" type="Wstring"/>
+                                    <xs:attribute name="AlignRefSubScan" type="Wstring"/>
+                                    <xs:attribute name="AutoThreshold" type="Wstring"/>
+                                    <xs:attribute name="Threshold" type="Wstring"/>
+                                    <xs:attribute name="Tolerance" type="Wstring"/>
+                                    <xs:attribute name="SearchArea" type="Wstring"/>
+                                    <xs:attribute name="DatumAngle" type="Wstring"/>
+                                    <xs:attribute name="CompIntensity" type="Wstring"/>
+                                    <xs:attribute name="MultiMACS" type="Wstring"/>
+                                    <xs:attribute name="OffsetRec" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_025">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="RlrOffset" type="Wstring"/>
+                                    <xs:attribute name="RlrWidth" type="Wstring"/>
+                                    <xs:attribute name="LeadWidth" type="Wstring"/>
+                                    <xs:attribute name="LeadLength" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_033">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="LeadNumN" type="Wstring"/>
+                                    <xs:attribute name="LeadPitchN" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_034">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="LeadNumS" type="Wstring"/>
+                                    <xs:attribute name="LeadPitchS" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_029">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="LeadNumN" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_031">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="LeadNumE" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_026">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="RlrOffset" type="Wstring"/>
+                                    <xs:attribute name="RlrWidth" type="Wstring"/>
+                                    <xs:attribute name="LeadPitch" type="Wstring"/>
+                                    <xs:attribute name="LeadWidth" type="Wstring"/>
+                                    <xs:attribute name="LeadLength" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_064">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="Recognition" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_073">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="LightSetting" type="Wstring"/>
+                                    <xs:attribute name="LightLevel" type="Wstring"/>
+                                    <xs:attribute name="AllLightOn" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_027">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="RlrOffset" type="Wstring"/>
+                                    <xs:attribute name="RlrWidth" type="Wstring"/>
+                                    <xs:attribute name="LeadPitch" type="Wstring"/>
+                                    <xs:attribute name="LeadWidth" type="Wstring"/>
+                                    <xs:attribute name="LeadLength" type="Wstring"/>
+                                    <xs:attribute name="BumpMask" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_082">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="PckTimer" type="Wstring"/>
+                                    <xs:attribute name="PckSpeed" type="Wstring"/>
+                                    <xs:attribute name="PckVLevel" type="Wstring"/>
+                                    <xs:attribute name="PckSingleDir" type="Wstring"/>
+                                    <xs:attribute name="PckCtrlDown" type="Wstring"/>
+                                    <xs:attribute name="PckCtrlUp" type="Wstring"/>
+                                    <xs:attribute name="NozzleTouchHeight" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_101">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="TrayXSize" type="Wstring"/>
+                                    <xs:attribute name="TrayYSize" type="Wstring"/>
+                                    <xs:attribute name="TrayXpt" type="Wstring"/>
+                                    <xs:attribute name="TrayYpt" type="Wstring"/>
+                                    <xs:attribute name="TrayZpt" type="Wstring"/>
+                                    <xs:attribute name="TrayThickness" type="Wstring"/>
+                                    <xs:attribute name="TraySt" type="Wstring"/>
+                                    <xs:attribute name="TrayEn" type="Wstring"/>
+                                    <xs:attribute name="TrayXiSize" type="Wstring"/>
+                                    <xs:attribute name="TrayYiSize" type="Wstring"/>
+                                    <xs:attribute name="TrayXipt" type="Wstring"/>
+                                    <xs:attribute name="TrayYipt" type="Wstring"/>
+                                    <xs:attribute name="CountStp" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_106">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="TrayXCur" type="Wstring"/>
+                                    <xs:attribute name="TrayYCur" type="Wstring"/>
+                                    <xs:attribute name="TrayCur" type="Wstring"/>
+                                    <xs:attribute name="TrayXiCur" type="Wstring"/>
+                                    <xs:attribute name="TrayYiCur" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_108">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="LhAccel" type="Wstring"/>
+                                    <xs:attribute name="LtAccel" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_014">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="BodyX" type="Wstring"/>
+                                    <xs:attribute name="BodyY" type="Wstring"/>
+                                    <xs:attribute name="BodyZ" type="Wstring"/>
+                                    <xs:attribute name="OffsetX" type="Wstring"/>
+                                    <xs:attribute name="OffsetY" type="Wstring"/>
+                                    <xs:attribute name="MoldX" type="Wstring"/>
+                                    <xs:attribute name="MoldY" type="Wstring"/>
+                                    <xs:attribute name="MoldZ" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_022">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="RlrWidth" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_036">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="RlrOffsetN" type="Wstring"/>
+                                    <xs:attribute name="LeadNumN" type="Wstring"/>
+                                    <xs:attribute name="LeadPitchN" type="Wstring"/>
+                                    <xs:attribute name="LeadWidthN" type="Wstring"/>
+                                    <xs:attribute name="LeadLengthN" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_037">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="RlrOffsetS" type="Wstring"/>
+                                    <xs:attribute name="LeadNumS" type="Wstring"/>
+                                    <xs:attribute name="LeadPitchS" type="Wstring"/>
+                                    <xs:attribute name="LeadWidthS" type="Wstring"/>
+                                    <xs:attribute name="LeadLengthS" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_040">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="RlrOffsetN" type="Wstring"/>
+                                    <xs:attribute name="LeadNumN" type="Wstring"/>
+                                    <xs:attribute name="LeadPitchN" type="Wstring"/>
+                                    <xs:attribute name="LeadWidthN" type="Wstring"/>
+                                    <xs:attribute name="LeadLengthN" type="Wstring"/>
+                                    <xs:attribute name="OffLeadStartN" type="Wstring"/>
+                                    <xs:attribute name="OffLeadEndN" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_041">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="RlrOffsetS" type="Wstring"/>
+                                    <xs:attribute name="LeadNumS" type="Wstring"/>
+                                    <xs:attribute name="LeadPitchS" type="Wstring"/>
+                                    <xs:attribute name="LeadWidthS" type="Wstring"/>
+                                    <xs:attribute name="LeadLengthS" type="Wstring"/>
+                                    <xs:attribute name="OffLeadStartS" type="Wstring"/>
+                                    <xs:attribute name="OffLeadEndS" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_042">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="RlrOffsetE" type="Wstring"/>
+                                    <xs:attribute name="LeadNumE" type="Wstring"/>
+                                    <xs:attribute name="LeadPitchE" type="Wstring"/>
+                                    <xs:attribute name="LeadWidthE" type="Wstring"/>
+                                    <xs:attribute name="LeadLengthE" type="Wstring"/>
+                                    <xs:attribute name="OffLeadStartE" type="Wstring"/>
+                                    <xs:attribute name="OffLeadEndE" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_043">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="RlrOffsetW" type="Wstring"/>
+                                    <xs:attribute name="LeadNumW" type="Wstring"/>
+                                    <xs:attribute name="LeadPitchW" type="Wstring"/>
+                                    <xs:attribute name="LeadWidthW" type="Wstring"/>
+                                    <xs:attribute name="LeadLengthW" type="Wstring"/>
+                                    <xs:attribute name="OffLeadStartW" type="Wstring"/>
+                                    <xs:attribute name="OffLeadEndW" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_078">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="LightSetting" type="Wstring"/>
+                                    <xs:attribute name="LightLevel" type="Wstring"/>
+                                    <xs:attribute name="AllLightOn" type="Wstring"/>
+                                    <xs:attribute name="ExcPinCheck" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_017">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="BodyDiameter" type="Wstring"/>
+                                    <xs:attribute name="BodyZ" type="Wstring"/>
+                                    <xs:attribute name="MoldDiameter" type="Wstring"/>
+                                    <xs:attribute name="MoldZ" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_038">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="RlrOffsetE" type="Wstring"/>
+                                    <xs:attribute name="LeadNumE" type="Wstring"/>
+                                    <xs:attribute name="LeadPitchE" type="Wstring"/>
+                                    <xs:attribute name="LeadWidthE" type="Wstring"/>
+                                    <xs:attribute name="LeadLengthE" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_039">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="RlrOffsetW" type="Wstring"/>
+                                    <xs:attribute name="LeadNumW" type="Wstring"/>
+                                    <xs:attribute name="LeadPitchW" type="Wstring"/>
+                                    <xs:attribute name="LeadWidthW" type="Wstring"/>
+                                    <xs:attribute name="LeadLengthW" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_015">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="BodyX" type="Wstring"/>
+                                    <xs:attribute name="BodyY" type="Wstring"/>
+                                    <xs:attribute name="BodyZ" type="Wstring"/>
+                                    <xs:attribute name="OffsetX" type="Wstring"/>
+                                    <xs:attribute name="OffsetY" type="Wstring"/>
+                                    <xs:attribute name="OffsetR" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_032">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="LeadNumW" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_055">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="LeadNumW2" type="Wstring"/>
+                                    <xs:attribute name="LeadPitchW2" type="Wstring"/>
+                                    <xs:attribute name="LeadWidthW2" type="Wstring"/>
+                                    <xs:attribute name="LeadLengthW2" type="Wstring"/>
+                                    <xs:attribute name="LeadPosXW2" type="Wstring"/>
+                                    <xs:attribute name="LeadPosYW2" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_057">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="BgaAmount" type="Wstring"/>
+                                    <xs:attribute name="BgaDotNumN" type="Wstring"/>
+                                    <xs:attribute name="BgaDotNumE" type="Wstring"/>
+                                    <xs:attribute name="BgaPitchN" type="Wstring"/>
+                                    <xs:attribute name="BgaPitchE" type="Wstring"/>
+                                    <xs:attribute name="BgaDiameter" type="Wstring"/>
+                                    <xs:attribute name="BinaryLevel" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_077">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="LightSetting" type="Wstring"/>
+                                    <xs:attribute name="LightLevel" type="Wstring"/>
+                                    <xs:attribute name="ExcBallCheck" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="BallSize">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="HSize" type="Wstring"/>
+                                    <xs:attribute name="VSize" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Ball">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="Data.01" type="Wstring"/>
+                                    <xs:attribute name="Data.02" type="Wstring"/>
+                                    <xs:attribute name="Data.03" type="Wstring"/>
+                                    <xs:attribute name="Data.04" type="Wstring"/>
+                                    <xs:attribute name="Data.05" type="Wstring"/>
+                                    <xs:attribute name="Data.06" type="Wstring"/>
+                                    <xs:attribute name="Data.07" type="Wstring"/>
+                                    <xs:attribute name="Data.08" type="Wstring"/>
+                                    <xs:attribute name="Data.09" type="Wstring"/>
+                                    <xs:attribute name="Data.10" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_010">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="BodyX" type="Wstring"/>
+                                    <xs:attribute name="BodyY" type="Wstring"/>
+                                    <xs:attribute name="BodyZ" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_056">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="BgaAmount" type="Wstring"/>
+                                    <xs:attribute name="BgaDotNumN" type="Wstring"/>
+                                    <xs:attribute name="BgaDotNumE" type="Wstring"/>
+                                    <xs:attribute name="BgaPitch" type="Wstring"/>
+                                    <xs:attribute name="BgaDiameter" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_011">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="BodyX" type="Wstring"/>
+                                    <xs:attribute name="BodyY" type="Wstring"/>
+                                    <xs:attribute name="BodyZ" type="Wstring"/>
+                                    <xs:attribute name="MoldX" type="Wstring"/>
+                                    <xs:attribute name="MoldY" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_024">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="RlrOffset" type="Wstring"/>
+                                    <xs:attribute name="LeadLength" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_044">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="RlrOffsetN" type="Wstring"/>
+                                    <xs:attribute name="LeadGroupN" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_045">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="RlrOffsetS" type="Wstring"/>
+                                    <xs:attribute name="LeadGroupS" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_046">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="RlrOffsetE" type="Wstring"/>
+                                    <xs:attribute name="LeadGroupE" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_047">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="RlrOffsetW" type="Wstring"/>
+                                    <xs:attribute name="LeadGroupW" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_048">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="LeadNumN1" type="Wstring"/>
+                                    <xs:attribute name="LeadPitchN1" type="Wstring"/>
+                                    <xs:attribute name="LeadWidthN1" type="Wstring"/>
+                                    <xs:attribute name="LeadLengthN1" type="Wstring"/>
+                                    <xs:attribute name="LeadPosXN1" type="Wstring"/>
+                                    <xs:attribute name="LeadPosYN1" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_049">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="LeadNumN2" type="Wstring"/>
+                                    <xs:attribute name="LeadPitchN2" type="Wstring"/>
+                                    <xs:attribute name="LeadWidthN2" type="Wstring"/>
+                                    <xs:attribute name="LeadLengthN2" type="Wstring"/>
+                                    <xs:attribute name="LeadPosXN2" type="Wstring"/>
+                                    <xs:attribute name="LeadPosYN2" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_050">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="LeadNumS1" type="Wstring"/>
+                                    <xs:attribute name="LeadPitchS1" type="Wstring"/>
+                                    <xs:attribute name="LeadWidthS1" type="Wstring"/>
+                                    <xs:attribute name="LeadLengthS1" type="Wstring"/>
+                                    <xs:attribute name="LeadPosXS1" type="Wstring"/>
+                                    <xs:attribute name="LeadPosYS1" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_051">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="LeadNumS2" type="Wstring"/>
+                                    <xs:attribute name="LeadPitchS2" type="Wstring"/>
+                                    <xs:attribute name="LeadWidthS2" type="Wstring"/>
+                                    <xs:attribute name="LeadLengthS2" type="Wstring"/>
+                                    <xs:attribute name="LeadPosXS2" type="Wstring"/>
+                                    <xs:attribute name="LeadPosYS2" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_052">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="LeadNumE1" type="Wstring"/>
+                                    <xs:attribute name="LeadPitchE1" type="Wstring"/>
+                                    <xs:attribute name="LeadWidthE1" type="Wstring"/>
+                                    <xs:attribute name="LeadLengthE1" type="Wstring"/>
+                                    <xs:attribute name="LeadPosXE1" type="Wstring"/>
+                                    <xs:attribute name="LeadPosYE1" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_053">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="LeadNumE2" type="Wstring"/>
+                                    <xs:attribute name="LeadPitchE2" type="Wstring"/>
+                                    <xs:attribute name="LeadWidthE2" type="Wstring"/>
+                                    <xs:attribute name="LeadLengthE2" type="Wstring"/>
+                                    <xs:attribute name="LeadPosXE2" type="Wstring"/>
+                                    <xs:attribute name="LeadPosYE2" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_054">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="LeadNumW1" type="Wstring"/>
+                                    <xs:attribute name="LeadPitchW1" type="Wstring"/>
+                                    <xs:attribute name="LeadWidthW1" type="Wstring"/>
+                                    <xs:attribute name="LeadLengthW1" type="Wstring"/>
+                                    <xs:attribute name="LeadPosXW1" type="Wstring"/>
+                                    <xs:attribute name="LeadPosYW1" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_100">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="TrayXSize" type="Wstring"/>
+                                    <xs:attribute name="TrayYSize" type="Wstring"/>
+                                    <xs:attribute name="TrayXpt" type="Wstring"/>
+                                    <xs:attribute name="TrayYpt" type="Wstring"/>
+                                    <xs:attribute name="TrayThickness" type="Wstring"/>
+                                    <xs:attribute name="TrayXiSize" type="Wstring"/>
+                                    <xs:attribute name="TrayYiSize" type="Wstring"/>
+                                    <xs:attribute name="TrayXipt" type="Wstring"/>
+                                    <xs:attribute name="TrayYipt" type="Wstring"/>
+                                    <xs:attribute name="CountStp" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_104">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="WastedSpaceL" type="Wstring"/>
+                                    <xs:attribute name="WastedSpaceR" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_105">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="TrayXCur" type="Wstring"/>
+                                    <xs:attribute name="TrayYCur" type="Wstring"/>
+                                    <xs:attribute name="TrayXiCur" type="Wstring"/>
+                                    <xs:attribute name="TrayYiCur" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_063">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="SurfaceType" type="Wstring"/>
+                                    <xs:attribute name="CutOuterNoise" type="Wstring"/>
+                                    <xs:attribute name="CutInnerNoise" type="Wstring"/>
+                                    <xs:attribute name="NoiseCutOrder" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_030">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="LeadNumS" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_004">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="FreeSpace1" type="Wstring"/>
+                                    <xs:attribute name="FreeSpace2" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_018">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="PolMark" type="Wstring"/>
+                                    <xs:attribute name="PolMarkPos" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="ExLights">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element maxOccurs="unbounded" name="ExLight">
+                                            <xs:complexType>
+                                                <xs:sequence></xs:sequence>
+                                                <xs:attribute name="No" type="Wstring"/>
+                                                <xs:attribute name="ExLightLevel" type="Wstring"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_109">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="LhAccel" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Part_079">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="Alignment" type="Wstring"/>
+                                    <xs:attribute name="AlignRefSubMlt" type="Wstring"/>
+                                    <xs:attribute name="AlignRefSubSgl" type="Wstring"/>
+                                    <xs:attribute name="AlignRefSubScan" type="Wstring"/>
+                                    <xs:attribute name="AutoThreshold" type="Wstring"/>
+                                    <xs:attribute name="Threshold" type="Wstring"/>
+                                    <xs:attribute name="Tolerance" type="Wstring"/>
+                                    <xs:attribute name="SearchArea" type="Wstring"/>
+                                    <xs:attribute name="DatumAngle" type="Wstring"/>
+                                    <xs:attribute name="EdgeThreshold" type="Wstring"/>
+                                    <xs:attribute name="MinMatchLevel" type="Wstring"/>
+                                    <xs:attribute name="AngleSearchArea" type="Wstring"/>
+                                    <xs:attribute name="MultiMACS" type="Wstring"/>
+                                    <xs:attribute name="OffsetRec" type="Wstring"/>
+                                    <xs:attribute name="RecognitionOffsetZ" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="SmartRecognition">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="Data.001" type="Wstring"/>
+                                    <xs:attribute name="Data.002" type="Wstring"/>
+                                    <xs:attribute name="Data.003" type="Wstring"/>
+                                    <xs:attribute name="Data.004" type="Wstring"/>
+                                    <xs:attribute name="Data.005" type="Wstring"/>
+                                    <xs:attribute name="Data.006" type="Wstring"/>
+                                    <xs:attribute name="Data.007" type="Wstring"/>
+                                    <xs:attribute name="Data.008" type="Wstring"/>
+                                    <xs:attribute name="Data.009" type="Wstring"/>
+                                    <xs:attribute name="Data.010" type="Wstring"/>
+                                    <xs:attribute name="Data.011" type="Wstring"/>
+                                    <xs:attribute name="Data.012" type="Wstring"/>
+                                    <xs:attribute name="Data.013" type="Wstring"/>
+                                    <xs:attribute name="Data.014" type="Wstring"/>
+                                    <xs:attribute name="Data.015" type="Wstring"/>
+                                    <xs:attribute name="Data.016" type="Wstring"/>
+                                    <xs:attribute name="Data.017" type="Wstring"/>
+                                    <xs:attribute name="Data.018" type="Wstring"/>
+                                    <xs:attribute name="Data.019" type="Wstring"/>
+                                    <xs:attribute name="Data.020" type="Wstring"/>
+                                    <xs:attribute name="Data.021" type="Wstring"/>
+                                    <xs:attribute name="Data.022" type="Wstring"/>
+                                    <xs:attribute name="Data.023" type="Wstring"/>
+                                    <xs:attribute name="Data.024" type="Wstring"/>
+                                    <xs:attribute name="Data.025" type="Wstring"/>
+                                    <xs:attribute name="Data.026" type="Wstring"/>
+                                    <xs:attribute name="Data.027" type="Wstring"/>
+                                    <xs:attribute name="Data.028" type="Wstring"/>
+                                    <xs:attribute name="Data.029" type="Wstring"/>
+                                    <xs:attribute name="Data.030" type="Wstring"/>
+                                    <xs:attribute name="Data.031" type="Wstring"/>
+                                    <xs:attribute name="Data.032" type="Wstring"/>
+                                    <xs:attribute name="Data.033" type="Wstring"/>
+                                    <xs:attribute name="Data.034" type="Wstring"/>
+                                    <xs:attribute name="Data.035" type="Wstring"/>
+                                    <xs:attribute name="Data.036" type="Wstring"/>
+                                    <xs:attribute name="Data.037" type="Wstring"/>
+                                    <xs:attribute name="Data.038" type="Wstring"/>
+                                    <xs:attribute name="Data.039" type="Wstring"/>
+                                    <xs:attribute name="Data.040" type="Wstring"/>
+                                    <xs:attribute name="Data.041" type="Wstring"/>
+                                    <xs:attribute name="Data.042" type="Wstring"/>
+                                    <xs:attribute name="Data.043" type="Wstring"/>
+                                    <xs:attribute name="Data.044" type="Wstring"/>
+                                    <xs:attribute name="Data.045" type="Wstring"/>
+                                    <xs:attribute name="Data.046" type="Wstring"/>
+                                    <xs:attribute name="Data.047" type="Wstring"/>
+                                    <xs:attribute name="Data.048" type="Wstring"/>
+                                    <xs:attribute name="Data.049" type="Wstring"/>
+                                    <xs:attribute name="Data.050" type="Wstring"/>
+                                    <xs:attribute name="Data.051" type="Wstring"/>
+                                    <xs:attribute name="Data.052" type="Wstring"/>
+                                    <xs:attribute name="Data.053" type="Wstring"/>
+                                    <xs:attribute name="Data.054" type="Wstring"/>
+                                    <xs:attribute name="Data.055" type="Wstring"/>
+                                    <xs:attribute name="Data.056" type="Wstring"/>
+                                    <xs:attribute name="Data.057" type="Wstring"/>
+                                    <xs:attribute name="Data.058" type="Wstring"/>
+                                    <xs:attribute name="Data.059" type="Wstring"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="No" type="Wstring"/>
+                        <xs:attribute name="DateTime" type="Wstring"/>
+                        <xs:attribute name="Operator" type="Wstring"/>
+                        <xs:attribute name="Serial" type="Wstring"/>
+                        <xs:attribute name="Application" type="Wstring"/>
+                        <xs:attribute name="Comment" type="Wstring"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:simpleType name="Wstring">
+        <xs:restriction base="xs:string">
+            <xs:whiteSpace value="preserve"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
