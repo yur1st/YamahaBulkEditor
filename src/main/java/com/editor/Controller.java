@@ -6,6 +6,7 @@ import com.editor.service.DatabasePartsRenamer;
 import com.editor.service.ProgramPartsRenamer;
 import com.editor.service.ProgramPartsRenamerBySpec;
 import jakarta.xml.bind.JAXBException;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TabPane;
 import javafx.scene.control.TextField;
@@ -171,6 +172,10 @@ public class Controller {
         chooser.setTitle("JavaFX Projects");
         File selectedDirectory = chooser.showDialog(rootNode.getScene().getWindow());
         if (selectedDirectory != null) field.setText(selectedDirectory.getPath());
+    }
+
+    public void quit(ActionEvent actionEvent) {
+
     }
 
 

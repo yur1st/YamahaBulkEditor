@@ -13,6 +13,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class ProgramPartsRenamerBySpec {
@@ -46,7 +47,13 @@ public class ProgramPartsRenamerBySpec {
         for (PcbDataFile.Machine.Mounts.Mount mount : program.getMachine().getMounts().getMount()) {
             String partNumber = mount.getComp();
             String refDes = mount.getComment();
-            PcbDataFile.Machine.Parts.Part.Part001 part001 = program.getMachine().getParts().getPart().get(Integer.parseInt(partNumber.trim()) - 1).getPart001();
+
+            List<PcbDataFile.Machine.Parts.Part> parts = program.getMachine().getParts().getPart();
+            Map<String, PcbDataFile.Machine.Parts.Part.Part001> partMap = new HashMap<>();
+            for (PcbDataFile.Machine.Parts.Part part : parts) {
+                partMap.put(part.getNo(), part.getPart001());
+            }
+            PcbDataFile.Machine.Parts.Part.Part001 part001 = partMap.get(partNumber.trim());
             String componentName = components.get(refDes);
             if (componentName != null) {
                 part001.setPartsName(components.get(refDes));
