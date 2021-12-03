@@ -7,7 +7,7 @@
 
     <groupId>com.owen</groupId>
     <artifactId>YamahaBulkEditor</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0-RC</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

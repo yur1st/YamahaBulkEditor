@@ -243,6 +243,21 @@
                                                 <xs:attribute name="Mark2" type="Wstring" use="required"/>
                                             </xs:complexType>
                                         </xs:element>
+                                        <xs:element maxOccurs="unbounded" name="LclFid">
+                                            <xs:complexType>
+                                                <xs:attribute name="No" type="Wstring" use="required" />
+                                                <xs:attribute name="X1" type="Wstring" use="required" />
+                                                <xs:attribute name="Y1" type="Wstring" use="required" />
+                                                <xs:attribute name="Mark1" type="Wstring" use="required" />
+                                                <xs:attribute name="X2" type="Wstring" use="required" />
+                                                <xs:attribute name="Y2" type="Wstring" use="required" />
+                                                <xs:attribute name="Mark2" type="Wstring" use="required" />
+                                                <xs:attribute name="Type" type="Wstring" use="required" />
+                                                <xs:attribute name="Skip" type="Wstring" use="required" />
+                                                <xs:attribute name="Comment" type="Wstring" use="required" />
+                                                <xs:attribute name="OrgBlk" type="Wstring" use="required" />
+                                            </xs:complexType>
+                                        </xs:element>
                                     </xs:sequence>
                                 </xs:complexType>
                             </xs:element>
