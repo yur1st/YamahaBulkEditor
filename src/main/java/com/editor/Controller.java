@@ -73,34 +73,11 @@ public class Controller {
     public void changeProgramNames() throws IOException, JAXBException {
         renameAll("parts", pathToYFact.getText());
         showError(COMPLETE);
-
-        /*Map<String, String> subs = new HashMap<>();
-        if (tabPane.getSelectionModel().getSelectedIndex() == 1) {
-            subs = CSVReader.readCSV(pathToReplacements.getText());
-        } else {
-            subs.put(oldName.getText(), newName.getText());
-        }
-        ProgramPartsRenamer renamer = new ProgramPartsRenamer(subs, pathToYFact.getText());
-        renamer.changeNames();*/
     }
 
     public void changeBdNames() throws IOException, JAXBException {
         renameAll("base", pathToFDX.getText());
         showError(COMPLETE);
-
-        /*Map<String, String> subs = new HashMap<>();
-        boolean fieldsValid = false;
-        if (tabPane.getSelectionModel().getSelectedIndex() == 1) {
-            if (fieldsValid = validateFields(pathToReplacements, pathToFDX, pathToYFact))
-                subs = CSVReader.readCSV(pathToReplacements.getText());
-        } else {
-            if (fieldsValid = validateFields(oldName, newName, pathToYFact))
-                subs.put(oldName.getText(), newName.getText());
-        }
-        if (fieldsValid) {
-            DatabasePartsRenamer renamer = new DatabasePartsRenamer(subs, pathToFDX.getText());
-            renamer.changeNames();
-        }*/
     }
 
     public void changeBySpec() throws IOException, JAXBException {

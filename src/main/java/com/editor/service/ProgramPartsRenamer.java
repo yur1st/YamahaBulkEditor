@@ -22,24 +22,24 @@ import static com.editor.dao.MessageHelper.showError;
 public class ProgramPartsRenamer extends AbstractPartsRenamer<PcbDataFile>
         implements RenamerInterface<PcbDataFile> {
 
-    private String pathToYFact;
+    private String programPath;
 
-    public ProgramPartsRenamer(Map<String, String> substitutions, String pathToYFact) {
+    public ProgramPartsRenamer(Map<String, String> substitutions, String programPath) {
         super(substitutions);
-        this.pathToYFact = pathToYFact;
+        this.programPath = programPath;
     }
 
     public void changeNames() throws IOException, JAXBException {
         List<Path> ygxFiles = new ArrayList<>();
-        try (Stream<Path> stream = Files.walk(Paths.get(pathToYFact))) {
+        try (Stream<Path> stream = Files.walk(Paths.get(programPath))) {
             ygxFiles = stream
                     .filter(p -> p.toString().endsWith(".ygx"))
                     .collect(Collectors.toList());
         } catch (NoSuchFileException e) {
-            showError("Указанной папки не существует");
+            showError("Программы для переименования отсутствуют");
         }
 
-        if (ygxFiles.size() > 0) {
+        if (!ygxFiles.isEmpty()) {
 
             for (Path path : ygxFiles) {
                 substitute(path.toString());
